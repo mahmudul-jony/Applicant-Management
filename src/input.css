@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+    @apply flex items-center justify-center p-2.5 text-white bg-teal-200 rounded-md h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-primary-only {
+    @apply flex items-center justify-center p-2.5 text-white bg-teal-700 rounded-full h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-secondary {
+    @apply flex items-center justify-center gap-2 p-2.5 text-sm text-neutral-900 bg-neutral-100 rounded-full h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-Tertiary {
+    @apply flex items-center justify-start gap-2 p-2.5 text-neutral-900 rounded-lg  h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-link {
+    @apply flex items-center justify-start gap-2 text-neutral-900 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-date-picker {
+    @apply  ps-9 p-2.5 w-36 text-sm text-neutral-900 bg-neutral-100 rounded-full transition-colors duration-300 ease-in-out
+}
+
+.btn-tab {
+    @apply flex items-center justify-start gap-2 p-2.5 text-neutral-600 hover:text-neutral-900 h-fit transition-colors duration-300 ease-in-out
+}
+
+.hgi-stroke {
+    @apply w-5 h-5 flex items-center justify-center text-xl leading-5
+}
+
+.logo-icon {
+    @apply w-6 h-6 text-teal-800 text-2xl leading-6 font-medium
+}
+
+.badge-Register {
+    @apply text-xs text-teal-800 bg-teal-100 px-1.5 py-1 rounded-md border border-teal-200 h-fit
+}
+
+.badge-onboard {
+    @apply text-xs text-red-600 px-1.5 py-1 rounded-md border border-red-300 bg-red-100 h-fit shadow
+}
+
+.applicant-list {
+    @apply p-3 flex justify-between items-center rounded-xl transition-all duration-300 ease-in-out hover:bg-teal-100
+}
+
+.applicant-list strong {
+    @apply text-sm font-medium truncate
+}
+
+.applicant-list small {
+    @apply text-sm text-neutral-600 truncate
+}
+
+.applicant-list span {
+    @apply text-xs font-medium
+}
+
+.name-mail {
+    @apply grid w-40
+}
+
+.applicant-head {
+    @apply grid p-3 gap-1 text-neutral-900
+}
+
+.applicant-head strong {
+    @apply text-lg font-medium
+}
+
+.applicant-head small {
+    @apply text-sm text-neutral-600
+}
+
+.search-input {
+    @apply w-full p-2.5 text-sm text-neutral-900 border-y border-l border-neutral-200 rounded-l-lg focus:outline-none focus-visible:ring-2 focus:border-none ring-teal-700 transition-colors duration-300 ease-in-out
+}
+
+.btn-search {
+    @apply flex items-center justify-center p-2.5 text-neutral-900 border border-neutral-200 rounded-r-lg h-fit transition-colors duration-300 ease-in-out
+}
+
+.area-input {
+    @apply w-full resize-none py-2.5 text-sm text-neutral-900 border-b border-neutral-200 focus:outline-none focus:border-teal-800 transition-colors duration-300 ease-in-out
+}
+
+.discussion {
+    @apply grid gap-1 ml-11 rounded-xl bg-neutral-100 p-3 w-fit
+}
+
+.discussion strong {
+    @apply text-sm font-medium text-neutral-900 
+}
+
+.discussion p {
+    @apply text-sm text-neutral-900
+}
+
+.follow-up-b {
+    @apply rounded-xl rounded-t-none border border-t-0 border-r-0 border-neutral-200 pt-3 drop-shadow-sm
+}
+
+.follow-up-bg {
+    @apply grid gap-1 rounded-xl bg-white p-3
+}
+
+
+.date {
+    @apply text-xs text-neutral-600
+}
+
+.created-by {
+    @apply flex items-center gap-3 
+}
+
+.created-by small {
+    @apply text-sm text-nowrap text-neutral-900
+}
+
+.created-by p {
+    @apply text-sm font-medium text-nowrap
+}
+
+/* width */
+::-webkit-scrollbar {
+    @apply w-1
+}
+
+/* Track,Back */
+::-webkit-scrollbar-track {
+    @apply bg-neutral-100
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-neutral-200 rounded-full h-4
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutral-400 
+}

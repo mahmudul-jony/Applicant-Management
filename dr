@@ -1,0 +1,257 @@
+
+
+.btn-primary-only {
+    @apply flex items-center justify-center p-2.5 text-white bg-lime-700 rounded-full hover:bg-lime-800 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-secondary {
+    @apply flex items-center justify-center gap-2 p-2.5 text-sm text-neutral-900 bg-neutral-50 rounded-full hover:bg-neutral-200 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-Tertiary {
+    @apply flex items-center justify-start gap-2 p-2.5 text-neutral-900 rounded-lg hover:bg-emerald-100 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-link {
+    @apply flex items-center justify-start gap-2 text-neutral-900 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-date-picker {
+    @apply focus:outline-none ps-9 p-2.5 text-sm text-neutral-900 bg-neutral-50 rounded-full hover:bg-neutral-200 transition-colors duration-300 ease-in-out
+}
+
+.btn-primary {
+    @apply flex items-center justify-center p-2.5 text-white bg-lime-700 rounded-md hover:bg-lime-800 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-primary-only {
+    @apply flex items-center justify-center p-2.5 text-white bg-lime-700 rounded-full hover:bg-lime-800 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-secondary {
+    @apply flex items-center justify-center gap-2 p-2.5 text-sm text-neutral-900 bg-neutral-50 rounded-full hover:bg-neutral-200 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-Tertiary {
+    @apply flex items-center justify-start gap-2 p-2.5 text-neutral-900 rounded-lg hover:bg-emerald-100 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-link {
+    @apply flex items-center justify-start gap-2 text-neutral-900 h-fit transition-colors duration-300 ease-in-out
+    }
+
+.btn-date-picker {
+    @apply focus:outline-none ps-9 p-2.5 text-sm text-neutral-900 bg-neutral-50 rounded-full hover:bg-neutral-200 transition-colors duration-300 ease-in-out
+}
+
+.btn-tab {
+    @apply flex items-center justify-start gap-2 p-2.5 text-neutral-900 rounded-lg hover:bg-emerald-100 h-fit transition-colors duration-300 ease-in-out
+}
+
+.hgi-stroke {
+    @apply w-5 h-5 flex items-center justify-center text-xl leading-5
+}
+
+.logo-icon {
+    @apply w-6 h-6 text-lime-700 text-2xl leading-6 font-medium
+}
+
+.badge-green {
+    @apply text-xs text-green-800 px-1.5 py-1 rounded-md border border-green-200 bg-green-50 h-fit shadow
+}
+
+.badge-yellow {
+    @apply text-xs text-yellow-800 px-1.5 py-1 rounded-md border border-yellow-200 bg-yellow-50 h-fit shadow
+}
+
+.badge-blue {
+    @apply text-xs text-blue-800 px-1.5 py-1 rounded-md border border-blue-200 bg-blue-50 h-fit shadow
+}
+
+.applicant-list {
+    @apply p-4 flex justify-between items-center transition-all duration-300 ease-in-out hover:bg-blue-50
+}
+
+.applicant-list strong {
+    @apply text-sm font-medium
+}
+
+.applicant-list small {
+    @apply text-sm text-gray-600
+}
+
+.applicant-head {
+    @apply grid px-4 pt-2 pb-4
+}
+
+.applicant-head strong {
+    @apply text-xl font-medium
+}
+
+.applicant-head small {
+    @apply text-sm leading-4 text-gray-600
+}
+
+.search-input {
+    @apply w-full p-2.5 text-sm text-neutral-900 border-y border-l border-neutral-200 rounded-l-lg focus:outline-none focus-visible:ring-2 focus:border-none ring-lime-700 transition-colors duration-300 ease-in-out
+}
+
+.btn-search {
+    @apply flex items-center justify-center p-2.5 text-neutral-900 border border-neutral-200 hover:border-lime-700 rounded-r-lg hover:bg-emerald-100 hover:text-lime-700 h-fit transition-colors duration-300 ease-in-out
+}
+
+.area-input-today {
+    @apply w-full resize-none py-2.5 text-sm text-neutral-900 border-b border-neutral-200 focus:outline-none focus:border-teal-900 transition-colors duration-300 ease-in-out
+}
+
+.area-input-next {
+    @apply w-full resize-none py-2.5 text-sm text-neutral-900 border-b border-neutral-200 focus:outline-none focus:border-teal-900 transition-colors duration-300 ease-in-out
+}
+
+.discussion {
+    @apply p-4 bg-white rounded-md shadow grid gap-2
+}
+
+.discussion strong {
+    @apply text-sm font-medium text-gray-800
+}
+
+.discussion p {
+    @apply text-sm text-gray-600
+}
+
+.issue {
+    @apply p-4 bg-red-50 rounded-md shadow grid gap-2
+}
+
+.issue strong {
+    @apply text-base font-medium text-gray-800
+}
+
+.issue p {
+    @apply text-sm text-gray-600
+}
+
+.issue li {
+    @apply text-xs font-medium text-red-600 list-disc list-outside
+}
+
+.duration {
+    @apply flex gap-4 justify-center items-center
+}
+
+.duration li {
+    @apply text-xs font-medium text-gray-800 list-disc list-outside
+}
+
+.duration p {
+    @apply text-xs
+}
+
+.duration strong {
+    @apply text-xs font-medium
+}
+
+.hgi-stroke {
+    @apply w-5 h-5 flex items-center justify-center text-xl leading-5
+}
+
+.logo-icon {
+    @apply w-6 h-6 text-lime-700 text-2xl leading-6 font-medium
+}
+
+.badge-green {
+    @apply text-xs text-green-800 px-1.5 py-1 rounded-md border border-green-200 bg-green-50 h-fit shadow
+}
+
+.badge-yellow {
+    @apply text-xs text-yellow-800 px-1.5 py-1 rounded-md border border-yellow-200 bg-yellow-50 h-fit shadow
+}
+
+.badge-blue {
+    @apply text-xs text-blue-800 px-1.5 py-1 rounded-md border border-blue-200 bg-blue-50 h-fit shadow
+}
+
+.applicant-list {
+    @apply p-4 flex justify-between items-center transition-all duration-300 ease-in-out hover:bg-blue-50
+}
+
+.applicant-list strong {
+    @apply text-sm font-medium
+}
+
+.applicant-list small {
+    @apply text-sm text-gray-600
+}
+
+.applicant-head {
+    @apply grid px-4 pt-2 pb-4
+}
+
+.applicant-head strong {
+    @apply text-xl font-medium
+}
+
+.applicant-head small {
+    @apply text-sm leading-4 text-gray-600
+}
+
+.search-input {
+    @apply w-full p-2.5 text-sm text-neutral-900 border-y border-l border-neutral-200 rounded-l-lg focus:outline-none focus-visible:ring-2 focus:border-none ring-lime-700 transition-colors duration-300 ease-in-out
+}
+
+.btn-search {
+    @apply flex items-center justify-center p-2.5 text-neutral-900 border border-neutral-200 hover:border-lime-700 rounded-r-lg hover:bg-emerald-100 hover:text-lime-700 h-fit transition-colors duration-300 ease-in-out
+}
+
+.area-input-today {
+    @apply w-full resize-none py-2.5 text-sm text-neutral-900 border-b border-neutral-200 focus:outline-none focus:border-teal-900 transition-colors duration-300 ease-in-out
+}
+
+.area-input-next {
+    @apply w-full resize-none py-2.5 text-sm text-neutral-900 border-b border-neutral-200 focus:outline-none focus:border-teal-900 transition-colors duration-300 ease-in-out
+}
+
+.discussion {
+    @apply p-4 bg-white rounded-md shadow grid gap-2
+}
+
+.discussion strong {
+    @apply text-sm font-medium text-gray-800
+}
+
+.discussion p {
+    @apply text-sm text-gray-600
+}
+
+.issue {
+    @apply p-4 bg-red-50 rounded-md shadow grid gap-2
+}
+
+.issue strong {
+    @apply text-base font-medium text-gray-800
+}
+
+.issue p {
+    @apply text-sm text-gray-600
+}
+
+.issue li {
+    @apply text-xs font-medium text-red-600 list-disc list-outside
+}
+
+.duration {
+    @apply flex gap-4 justify-center items-center
+}
+
+.duration li {
+    @apply text-xs font-medium text-gray-800 list-disc list-outside
+}
+
+.duration p {
+    @apply text-xs
+}
+
+.duration strong {
+    @apply text-xs font-medium
+}

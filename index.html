@@ -1,0 +1,489 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"/>
+  <link href="src\input.css" rel="stylesheet">
+</head>
+<body class="font-serif">
+<div class="flex h-screen">
+
+  <!--sidebar section-->
+  <sidebar class="p-3 w-60 bg-neutral-50 border-r border-neutral-200">
+    <div class="flex gap-2 justify-start items-start py-1.5 px-2.5 h-fit">
+      <i class="logo-icon hgi-stroke hgi-whatsapp"></i>
+      <strong class="text-xl font-semibold" >WhatsApp</strong>
+    </div>
+    
+    <div class="flex flex-col gap-0.5">
+      <button
+        type="button"
+        onclick="document.location='components.html'"
+        class="btn-Tertiary">
+        <i class="hgi-stroke hgi-stroke hgi-dashboard-browsing"></i>
+        <small class="text-sm font-normal" >Dashboard</small>
+      </button>
+      <button
+        type="button"
+        class="btn-Tertiary">
+        <i class="hgi-stroke hgi-stroke hgi-user-multiple-02"></i>
+        <small class="text-sm font-normal" >My Applicants</small>
+      </button>
+      <button
+        type="button"
+        class="btn-Tertiary">
+        <i class="hgi-stroke hgi-stroke hgi-task-daily-02"></i>
+        <small class="text-sm font-normal" >My Tasks</small>
+      </button>
+      <button
+        type="button"
+        class="btn-Tertiary">
+        <i class="hgi-stroke hgi-stroke hgi-notification-02"></i>
+        <small class="text-sm font-normal" >Notifications</small>
+      </button>
+    </div>
+
+    <div class="flex flex-col place-content-end gap-0.5">
+      <button
+        type="button"
+        class="btn-Tertiary">
+        <i class="hgi-stroke hgi-stroke hgi-settings-02"></i>
+        <small class="text-sm font-normal" >Settings</small>
+      </button>
+      <button
+        type="button"
+        class="btn-Tertiary">
+        <i class="hgi-stroke hgi-stroke hgi-user-circle-02"></i>
+        <small class="text-sm font-normal" >Mahmudul</small>
+      </button>
+
+    </div>
+  </sidebar>
+  <!--applicant list section-->
+  <section class="w-[560px] border-r border-neutral-200">
+    <!--appliccant list>head section-->
+    <div class="p-3 flex flex-col gap-3.5 border-b border-neutral-200">
+      <div class="flex justify-between items-center">
+        <strong class="text-xl font-semibold">Applicant List</strong>
+        <button
+          id="add-Applicant"
+          type="button"
+          class="btn-primary-only">
+          <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
+        </button>
+      </div>
+
+      <div class="flex">
+        <input
+          type="text"
+          class="search-input z-10"
+          placeholder="Search for..."
+          aria-label="Search"
+          aria-describedby="basic-addon2"
+        />
+        <button
+        type="button"
+        class="btn-search">
+          <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
+        </button>
+      </div>
+    </div>
+    <!--applicant list>list section-->
+      <div class="flex flex-col py-1.5 pr-0.5 pl-1.5 overflow-y-auto h-[calc(100%-122.4px)]">
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Md. Maraj Hossain</strong>
+                  <small class="text-gray-600">marajmmc@gmail.com</small>
+              </div>
+              <span class="badge-green">Register</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Rafiq Ahmed</strong>
+                  <small class="text-gray-600">rafiq@gmail.com</small>
+              </div>
+              <span class="badge-green">Register</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Tania Begum</strong>
+                  <small>taniabegum4040@gmail.com</small>
+              </div>
+              <span class="badge-yellow">University Added</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Fahad Chowdhury</strong>
+                  <small class="text-gray-600">fahad@gmail.com</small>
+              </div>
+              <span class="badge-green">Register</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Rupa Sultana</strong>
+                  <small class="text-gray-600">rupa@gmail.com</small>
+              </div>
+              <span class="badge-green">Onboard Applicant</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Imran Hossain</strong>
+                  <small class="text-gray-600">imran@gmail.com</small>
+              </div>
+              <span class="badge-yellow">University Added</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Shifa Akter</strong>
+                  <small class="text-gray-600">shifa@gmail.com</small>
+              </div>
+              <span class="badge-green">Register</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Niloy Rahman</strong>
+                  <small class="text-gray-600">niloy@gmail.com</small>
+              </div>
+              <span class="badge-yellow">University Added</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Arif Hasan</strong>
+                  <small class="text-gray-600">arif@gmail.com</small>
+              </div>
+              <span class="badge-green">Register</span>
+          </div>
+          <div class="applicant-list">
+              <div class="name-mail">
+                  <strong>Md. Maraj Hossain</strong>
+                  <small class="text-gray-600">marajmmc@gmail.com</small>
+              </div>
+              <span class="badge-green">Onboard Applicant</span>
+          </div>
+      </div>
+  </section>
+  <!--right main section-->
+  <main class="flex flex-col w-full">
+    <!--Main>head section-->
+    <div class="applicant-head">
+      <div class="flex gap-2 items-center">
+          <strong>Md. Maraj Hossain</strong>
+          <span class="badge-Register">Register</span>
+      </div>
+      <small class="text-gray-600">marajmmc@gmail.com</small>
+  </div>
+    <!--Main>head section>Tab-->
+    <div class="flex flex-wrap text-sm font-medium text-center text-neutral-600 px-2 border-y border-neutral-200">
+      <button class="tablinks btn-tab" id="Activity-tab" onclick="openmain(event, 'Activity')">Activity history</button>
+      <button class="tablinks btn-tab" onclick="openmain(event, 'Onboard')">Onboard Applicant</button>
+      <button class="tablinks btn-tab" onclick="openmain(event, 'Profile')">Profile</button>
+      <button class="tablinks btn-tab" onclick="openmain(event, 'Manage')">Manage University</utton>
+    </div>
+    <!--applicant details>history section-->
+    <div class="p-3 inset-shadow-sm  inset-shadow-neutral-200 overflow-y-auto tabcontent" id="Activity">
+      
+      <div class="flex items-center">
+        <hr class="w-full text-neutral-200" />
+        <div class="text-nowrap date mx-2">18 Feb 2025</div>
+        <hr class="w-full text-neutral-200" />
+      </div>
+
+      <div class="created-by">
+        <img class="size-8 rounded-full ring-1 ring-neutral-400 bg-gray-100" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
+        <div class="flex gap-2">
+          <small>Syam Rhye</small>
+          <p class="text-yellow-500">Registered Applicant</p>
+        </div>
+      </div>
+
+      <div class="discussion">
+        <strong>Ishaan Akhtar</strong>
+        <p>Ester123@gmail.com</p>
+      </div>
+
+      <div class="created-by">
+        <img class="size-8 rounded-full ring-1 ring-neutral-400 bg-gray-100" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
+        <div class="flex gap-2">
+          <small>Syam Rhye</small>
+          <p class="text-neutral-900">Created Follow Up Discussion</p>
+        </div>
+      </div>
+
+      <div class="discussion">
+        <strong> Todays Discusation</strong>
+        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </small>
+
+        <div class="follow-up-b">
+          <div class="follow-up-bg">
+            <strong>Next Follow-up Issue</strong>
+            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center">
+        <hr class="w-full text-neutral-200" />
+        <div class="text-nowrap date mx-2">20 Feb 2025</div>
+        <hr class="w-full text-neutral-200" />
+      </div>
+
+      <div class="created-by">
+        <img class="size-8 rounded-full ring-1 ring-neutral-400 bg-gray-100" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
+        <div class="flex gap-2">
+          <small>Syam Rhye</small>
+          <p class="text-teal-700">Onboarded Applicant</p>
+        </div>
+      </div>
+
+      <div class="discussion">
+        <strong>Note</strong>
+        <p>Congratulations! Please add university for the applicant.</p>
+      </div>
+
+      <div class="flex items-center">
+        <hr class="w-full text-neutral-200" />
+        <div class="text-nowrap date mx-2">21 Feb 2025</div>
+        <hr class="w-full text-neutral-200" />
+      </div>
+
+      <div class="created-by">
+        <img class="size-8 rounded-full ring-1 ring-neutral-400 bg-gray-100" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
+        <div class="flex gap-2">
+          <small>Syam Rhye</small>
+          <p class="text-red-600">University Added</p>
+        </div>
+      </div>
+
+      <div class="discussion">
+        <strong>Note</strong>
+        <p>Congratulations! Congratulations! Applicant will be visable for application team. The team will apply for university as soon as posiable.</p>
+      </div>
+
+      <div class="flex items-center">
+        <hr class="w-full text-neutral-200" />
+        <div class="text-nowrap text-xs mx-2 text-neutral-400">No more Activity</div>
+        <hr class="w-full text-neutral-200" />
+      </div>
+
+    </div>
+
+    <div class="tabcontent p-4 bg-blue-200" id="Onboard">
+      <p class="text-2xl text-gray-800 ">Onboard Applicant</p>
+      </div>
+      <div class="tabcontent p-4 bg-red-200" id="Manage">
+          <p class="text-2xl text-gray-800 ">Manage University</p>
+      </div>
+      <div class="tabcontent p-4 bg-green-200" id="Profile">
+          <p class="text-2xl text-gray-800 ">Profile</p>
+      </div>
+<!--applicant details>Discussion Area section-->
+      <form class="flex gap-3 justify-end items-end p-3 pt-0 border-t border-neutral-200">
+        <div class="w-full">
+          <textarea id="chat" rows="1" class="area-input" placeholder="What’s today’s discussion?..."></textarea>
+          <textarea id="chat" rows="1" class="area-input" placeholder="What would be the next date issue?..."></textarea>
+
+          <div class="flex gap-4 mt-3">
+            <button type="button"
+              class="btn-secondary">
+              <i class="hgi-stroke hgi-user-circle-02"></i>
+              <small class="text-sm font-normal" >Assign</small>
+            </button>
+            
+            <div class="relative">
+              <div class="absolute m-2.5 pointer-events-none">
+              <i class="hgi-stroke hgi-stroke hgi-calendar-04"></i>
+              </div>
+              <input id="datepicker-autohide datepicker-orientation datepicker-format" datepicker datepicker-autohide datepicker-orientation="top right" datepicker-format="dd-mm-yyyy" type="text"
+              class="btn-date-picker" placeholder="Follow Up Date">
+            </div>
+          </div>
+        </div>
+      
+      <button type="submit"
+      class="btn-primary-only">
+      <i class="hgi-stroke hgi-stroke hgi-navigation-03"></i>
+      </button>
+
+      </form>
+
+  </main>
+
+  <!---Modal>add-Applicant -->
+  <div id="add-applicant-modal" class="hidden fixed bg-gray-800 bg-opacity-50">
+
+    <div class="h-fit px-5 mx-auto mt-20 border border-neutral-200 shadow-lg rounded-xl bg-white">
+      <div class="flex justify-between items-center py-5 border-b border-neutral-200">
+        <strong>Add Applicant</strong>
+        <button
+          id="Close"
+          type="button"
+          class="px-2 py-2 text-sm font-medium text-red-900 bg-transparent rounded-md hover:text-red-50 hover:bg-red-600 h-fit"
+        >
+          <i
+            class="hgi-stroke hgi-stroke hgi-cancel-01"
+          ></i>
+        </button>
+      </div>
+
+      <form class="py-5">
+        <div class="grid gap-4 grid-cols-2">
+          <div class="col-span-2">
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Name</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="p-2 border border-neutral-200 text-gray-800 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block"
+              placeholder="Type product name"
+              required=""
+            />
+          </div>
+          <div class="col-span-2">
+            <label
+              for="price"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Price</label
+            >
+            <input
+              type="number"
+              name="price"
+              id="price"
+              class="p-2 border border-neutral-200 text-gray-800 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block"
+              placeholder="$2999"
+              required=""
+            />
+          </div>
+
+
+          <div class="col-span-2">
+            <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Category</label>
+            <select id="category" class="p-2 border border-neutral-200 text-gray-800 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block">
+              <option selected="">Select category</option>
+              <option value="TV">TV/Monitors</option>
+              <option value="PC">PC</option>
+              <option value="GA">Gaming/Console</option>
+              <option value="PH">Phones</option>
+            </select>
+          </div>
+
+          <div class="relative inline-block text-left">
+            <div>
+              <button type="button" class="inline-flex justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                Options
+                <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          
+            <!--
+              Dropdown menu, show/hide based on menu state.
+          
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+            <div class="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                <form method="POST" action="#" role="none">
+                  <button type="submit" class="block px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2">
+            <label
+              for="description"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Product Description</label
+            >
+            <textarea
+              id="description"
+              rows="4"
+              class="block p-2.5 text-sm text-gray-900 rounded-lg border border-neutral-200 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Write product description here"
+            ></textarea>
+          </div>
+        </div>
+      </form>
+      <div class="flex gap-2 justify-end py-5 border-t border-neutral-200">
+        <button
+          id="Close"
+          type="button"
+          class="px-3 py-2 text-sm font-medium text-gray-900 bg-transparent border border-neutral-200 rounded-md hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+        <button
+          id="Close"
+          type="button"
+          class="px-3 py-2 text-sm font-medium text-gray-900 bg-transparent border border-neutral-200 rounded-md hover:bg-gray-50"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+
+<!--script for modal-->
+<script>
+let modal = document.getElementById("add-applicant-modal");
+let btn = document.getElementById("add-Applicant");
+let button = document.getElementById("Close");
+
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+button.onclick = function () {
+  modal.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+</script>
+<!--script for tab-->
+<script>
+function openmain(evt, main) {
+var i, tabcontent, tablinks;
+
+tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+  }
+
+tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("text-teal-800", "border-b", "border-teal-800");
+  }
+
+document.getElementById(main).style.display = "block";
+
+evt.currentTarget.classList.add("text-teal-800", "border-b", "border-teal-800");
+}
+
+document.getElementById("Activity-tab").click();
+</script>
+<!--script for datepicker-->
+<script
+src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js">
+</script>
+
+</div>
+</body>
+</html>
