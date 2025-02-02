@@ -35,42 +35,21 @@
     @apply resize-none w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border-b border-neutral-100 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out
 }
 
-.discussion {
-    @apply grid gap-1 ml-11 rounded-xl bg-neutral-100 p-3 w-fit
-}
+.date {@apply flex items-center text-xs text-nowrap mx-2 text-neutral-800 my-1.5}
+.avatar {@apply size-8 rounded-full ring-1 ring-neutral-200 bg-neutral-100}
+.created-by {@apply flex items-center gap-3 my-1.5}
+.created-by p {@apply text-sm text-nowrap text-neutral-800}
+.created-by span {@apply text-sm font-medium text-nowrap}
 
-.discussion strong {
-    @apply text-sm font-medium text-neutral-800 
-}
+.chat-system {@apply ml-11 my-3 rounded-xl bg-teal-500 border-b border-neutral-300 p-3 w-fit}
+.chat-system strong {@apply text-sm font-medium text-neutral-800}
+.chat-system p {@apply text-sm text-neutral-800}
 
-.discussion p {
-    @apply text-sm text-neutral-800
-}
-
-.follow-up-b {
-    @apply rounded-xl rounded-t-none border border-t-0 border-r-0 border-neutral-200 pt-3 drop-shadow-sm
-}
-
-.follow-up-bg {
-    @apply grid gap-1 rounded-xl bg-white p-3
-}
-
-
-.date {
-    @apply text-xs text-neutral-600
-}
-
-.created-by {
-    @apply flex items-center gap-3 
-}
-
-.created-by p {
-    @apply text-sm text-nowrap text-neutral-800
-}
-
-.created-by p {
-    @apply text-sm font-medium text-nowrap
-}
+.chat-discusation {@apply ml-11 my-3 rounded-xl bg-white border-b border-neutral-300 p-3 w-fit}
+.chat-discusation strong {@apply text-sm font-medium text-neutral-800}
+.chat-discusation p {@apply text-sm text-neutral-800}
+.follow-up-b {@apply rounded-xl rounded-t-none border border-t-0 border-r-0 border-teal-800 pt-3}
+.follow-up-bg {@apply rounded-xl bg-teal-500 p-3}
 
 /* width */
 ::-webkit-scrollbar {
