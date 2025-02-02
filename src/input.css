@@ -2,92 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-primary {
-    @apply flex items-center justify-center p-2.5 text-white bg-teal-200 rounded-md h-fit transition-colors duration-300 ease-in-out
-    }
+.btn-primary {@apply flex items-center justify-center p-2.5 text-white bg-teal-500 rounded-md h-fit transition-colors duration-300 ease-in-out}
+.btn-primary-only {@apply flex items-center justify-center p-2.5 text-white bg-teal-800 rounded-full hover:bg-teal-900 h-fit transition-colors duration-300 ease-in-out}
+.btn-secondary {@apply flex items-center justify-center gap-2 p-2.5 text-sm text-neutral-800 bg-neutral-100 rounded-full h-fit transition-colors duration-300 ease-in-out}
+.btn-Tertiary {@apply flex items-center justify-start gap-2 p-2.5 text-neutral-400 rounded-full hover:bg-neutral-100 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 transition-colors duration-300 ease-in-out}
+.btn-link {@apply flex items-center justify-start gap-2 text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
+.btn-date-picker {@apply  ps-7 w-fit text-sm placeholder-neutral-400 hover:placeholder-neutral-800 focus:outline-none transition-colors duration-300 ease-in-out}
+.btn-tab {@apply p-2.5 text-sm font-medium text-center text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 
-.btn-primary-only {
-    @apply flex items-center justify-center p-2.5 text-white bg-teal-700 rounded-full h-fit transition-colors duration-300 ease-in-out
-    }
+.search-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 rounded-l-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
+.btn-search {@apply flex items-center justify-center p-2.5 text-neutral-400 bg-neutral-100 rounded-r-lg hover:bg-neutral-200 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 
-.btn-secondary {
-    @apply flex items-center justify-center gap-2 p-2.5 text-sm text-neutral-900 bg-neutral-100 rounded-full h-fit transition-colors duration-300 ease-in-out
-    }
+.hgi-stroke {@apply w-5 h-5 flex items-center justify-center text-xl leading-5}
 
-.btn-Tertiary {
-    @apply flex items-center justify-start gap-2 p-2.5 text-neutral-900 rounded-lg  h-fit transition-colors duration-300 ease-in-out
-    }
+.badge-Register {@apply px-1.5 py-1 text-xs text-green-600 bg-neutral-50 rounded-md border border-neutral-200 h-fit}
+.badge-onboard {@apply px-1.5 py-1 text-xs text-red-600 bg-neutral-50 rounded-md border border-neutral-200  h-fit}
 
-.btn-link {
-    @apply flex items-center justify-start gap-2 text-neutral-900 h-fit transition-colors duration-300 ease-in-out
-    }
+.status-register {@apply text-green-600}
+.status-uadded {@apply text-yellow-500}
+.status-onboard {@apply text-red-600}
 
-.btn-date-picker {
-    @apply  ps-9 p-2.5 w-36 text-sm text-neutral-900 bg-neutral-100 rounded-full transition-colors duration-300 ease-in-out
-}
+.applicant-list {@apply p-3 flex justify-between items-center rounded-xl hover:bg-neutral-50 transition-all duration-300 ease-in-out}
+.applicant-list strong {@apply text-sm text-neutral-800 font-medium truncate}
+.applicant-list p {@apply text-sm text-neutral-400 truncate}
+.applicant-list span {@apply text-xs font-medium}
+.name-mail-w {@apply grid w-40}
 
-.btn-tab {
-    @apply flex items-center justify-start gap-2 p-2.5 text-neutral-600 hover:text-neutral-900 h-fit transition-colors duration-300 ease-in-out
-}
-
-.hgi-stroke {
-    @apply w-5 h-5 flex items-center justify-center text-xl leading-5
-}
-
-.logo-icon {
-    @apply w-6 h-6 text-teal-800 text-2xl leading-6 font-medium
-}
-
-.badge-Register {
-    @apply text-xs text-teal-800 bg-teal-100 px-1.5 py-1 rounded-md border border-teal-200 h-fit
-}
-
-.badge-onboard {
-    @apply text-xs text-red-600 px-1.5 py-1 rounded-md border border-red-300 bg-red-100 h-fit shadow
-}
-
-.applicant-list {
-    @apply p-3 flex justify-between items-center rounded-xl transition-all duration-300 ease-in-out hover:bg-teal-100
-}
-
-.applicant-list strong {
-    @apply text-sm font-medium truncate
-}
-
-.applicant-list small {
-    @apply text-sm text-neutral-600 truncate
-}
-
-.applicant-list span {
-    @apply text-xs font-medium
-}
-
-.name-mail {
-    @apply grid w-40
-}
-
-.applicant-head {
-    @apply grid p-3 gap-1 text-neutral-900
-}
-
-.applicant-head strong {
-    @apply text-lg font-medium
-}
-
-.applicant-head small {
-    @apply text-sm text-neutral-600
-}
-
-.search-input {
-    @apply w-full p-2.5 text-sm text-neutral-900 border-y border-l border-neutral-200 rounded-l-lg focus:outline-none focus-visible:ring-2 focus:border-none ring-teal-700 transition-colors duration-300 ease-in-out
-}
-
-.btn-search {
-    @apply flex items-center justify-center p-2.5 text-neutral-900 border border-neutral-200 rounded-r-lg h-fit transition-colors duration-300 ease-in-out
-}
+.applicant-head strong {@apply text-lg text-neutral-800 font-medium}
+.applicant-head p {@apply text-sm text-neutral-400}
 
 .area-input {
-    @apply w-full resize-none py-2.5 text-sm text-neutral-900 border-b border-neutral-200 focus:outline-none focus:border-teal-800 transition-colors duration-300 ease-in-out
+    @apply resize-none w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border-b border-neutral-100 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out
 }
 
 .discussion {
@@ -95,11 +40,11 @@
 }
 
 .discussion strong {
-    @apply text-sm font-medium text-neutral-900 
+    @apply text-sm font-medium text-neutral-800 
 }
 
 .discussion p {
-    @apply text-sm text-neutral-900
+    @apply text-sm text-neutral-800
 }
 
 .follow-up-b {
@@ -119,8 +64,8 @@
     @apply flex items-center gap-3 
 }
 
-.created-by small {
-    @apply text-sm text-nowrap text-neutral-900
+.created-by p {
+    @apply text-sm text-nowrap text-neutral-800
 }
 
 .created-by p {
