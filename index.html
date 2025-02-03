@@ -268,7 +268,7 @@
               <div class="text-nowrap text-xs mx-2 text-neutral-400">No more Activity</div>
               <hr class="w-full text-neutral-200" />
             </div>
-        </div>
+          </div>
 
           <div class="tabcontent p-4 bg-blue-200" id="Onboard">
           <p class="text-2xl text-gray-800 ">Onboard Applicant</p>
@@ -281,8 +281,8 @@
           </div>
         <!--main>Discussion chat section-->
           <form class="p-3 grid grid-flow-row gap-3 border-t border-neutral-200">
-              <textarea id="chat" rows="1" class="area-input bg-neutral-300" placeholder="What’s today’s discussion?..."></textarea>
-              <textarea id="chat" rows="1" class="area-input bg-neutral-100" placeholder="What would be the next date issue?..."></textarea>
+              <textarea id="chat" rows="1" class="chat-input bg-neutral-300" placeholder="What’s today’s discussion?..."></textarea>
+              <textarea id="chat" rows="1" class="chat-input bg-neutral-100" placeholder="What would be the next date issue?..."></textarea>
 
               <div class="flex items-center justify-between">
                 <div class="flex gap-6 items-center">
@@ -312,107 +312,135 @@
           </form>
       </main>
 
-        <!---Modal>add-Applicant -->
+    <!---Modal>add-Applicant -->
+      <div id="mySidenav" class="sidenav h-full fixed ml-16 border-x border-neutral-200 bg-white overflow-x-hidden transition-all duration-300 ease-in-out">
+        <div class="w-[324.95px]">
 
-            <div id="mySidenav" class="sidenav h-full fixed ml-16 border-x border-neutral-200 bg-white overflow-x-hidden transition-all duration-300 ease-in-out">
-              <div class="p-3 w-[324.95px]">
+          <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+            <button
+              onclick="closeNav()"
+              id="javascript:void(0)"
+              type="button"
+              class="btn-Tertiary closebtn">
+              <i class="hgi-stroke hgi-arrow-left-02"></i>
+            </button>
+            <strong class="text-md font-medium text-neutral-800">Add Applicant</strong>
+          </div>
 
-                <div class="flex justify-between items-center">
-                  <strong class="text-xl font-semibold text-neutral-800">Add Applicant</strong>
-                    <button
-                    onclick="closeNav()"
-                    id="javascript:void(0)"
-                    type="button"
-                    class="btn-distractive closebtn">
-                    <i class="hgi-stroke hgi-stroke hgi-cancel-01"></i>
-                    </button>
-                </div>
-
-              
-  
-                <form class="py-5">
-                <div class="grid gap-4 grid-cols-2">
-                <div class="col-span-2">
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
-                <input type="text" name="name" id="name" class="p-2 border border-neutral-200 text-gray-800 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block" placeholder="Type product name" required=""/>
-                </div>
-                <div class="col-span-2">
-                <label for="price" class="block mb-2 text-sm font-medium text-gray-900" >Price</label>
-                <input type="number" name="price" id="price" class="p-2 border border-neutral-200 text-gray-800 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block" placeholder="$2999" required=""/>
-                </div>
-  
-                <div class="col-span-2">
-                <label for="description" class="block mb-2 text-sm font-medium text-gray-900" >Product Description</label>
-                <textarea id="description" rows="4" class="block p-2.5 text-sm text-gray-900 rounded-lg border border-neutral-200 focus:ring-blue-500 focus:border-blue-500" placeholder="Write product description here"></textarea>
-                </div>
-                </div>
-                </form>
-                <div class="flex gap-2 justify-end py-5 border-t border-neutral-200">
-                <button id="Close" type="button" class="px-3 py-2 text-sm font-medium text-gray-900 bg-transparent border border-neutral-200 rounded-md hover:bg-gray-50"> Cancel</button>
-                <button id="Close" type="button" class="px-3 py-2 text-sm font-medium text-gray-900 bg-transparent border border-neutral-200 rounded-md hover:bg-gray-50">Save</button>
-                </div>
-              </div>
+          <form class="p-3">
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Applicant Name</label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter name"
+              required=""/>
             </div>
+
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Email Address</label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter email address"
+              required=""/>
+            </div>
+
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Phone Number</label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter phone number"/>
+            </div>
+
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">CRM ID</label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter CRM ID"
+              required=""/>
+            </div>
+
+            <div class="col-span-2">
+              <label for="description" class="block mb-2 text-sm font-medium text-gray-900" >Product Description</label>
+              <textarea id="address" rows="3" class="area-input bg-neutral-100" placeholder="Applicant address..."></textarea>
+            </div>
+          </form>
+
+          <div class="flex gap-2 justify-end p-3 border-t border-neutral-200">
+            <button onclick="closeNav()" id="javascript:void(0)" type="button" class="btn-distractive closebtn"> Cancel</button>
+            <button id="save" type="button" class="btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
           
+    <!--script for add applicant-->
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "326px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
 
-<!--script for modal-->
+    <!-- <script>
+    let modal = document.getElementById("add-applicant-modal");
+    let btn = document.getElementById("add-Applicant");
+    let button = document.getElementById("Close");
 
-<script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "324.95px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  </script>
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+    button.onclick = function () {
+      modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+    </script> -->
 
-<!-- <script>
-let modal = document.getElementById("add-applicant-modal");
-let btn = document.getElementById("add-Applicant");
-let button = document.getElementById("Close");
+    <!--script for tab-->
+      <script>
+      function openmain(evt, main) {
+      var i, tabcontent, tablinks;
 
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-button.onclick = function () {
-  modal.style.display = "none";
-};
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-</script> -->
+      tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
 
-<!--script for tab-->
-<script>
-function openmain(evt, main) {
-var i, tabcontent, tablinks;
+      tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("text-teal-800", "border-b", "border-teal-800");
+        }
 
-tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-  tabcontent[i].style.display = "none";
-  }
+      document.getElementById(main).style.display = "block";
 
-tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("text-teal-800", "border-b", "border-teal-800");
-  }
+      evt.currentTarget.classList.add("text-teal-800", "border-b", "border-teal-800");
+      }
 
-document.getElementById(main).style.display = "block";
+      document.getElementById("Activity-tab").click();
+      </script>
 
-evt.currentTarget.classList.add("text-teal-800", "border-b", "border-teal-800");
-}
+    <!--script for datepicker-->
+      <script
+      src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js">
+      </script>
 
-document.getElementById("Activity-tab").click();
-</script>
-
-<!--script for datepicker-->
-<script
-src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js">
-</script>
-
-</div>
+  </div>
 </body>
 </html>
