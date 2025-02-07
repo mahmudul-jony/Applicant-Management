@@ -64,110 +64,145 @@
     <div class="w-96 flex border-x border-neutral-200">
       
       <!--applicant list section-->
-      <section id="applicant-list" class="w-full">
-        <!--appliccant list>head section-->
-          <div class="p-3 flex flex-col gap-3.5 border-b border-neutral-200">
-            <div class="flex justify-between items-center">
-              <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
+        <section id="applicant-list" class="w-full">
+          <!--appliccant list>head section-->
+            <div class="p-3 flex flex-col gap-3.5 border-b border-neutral-200">
+              <div class="flex justify-between items-center">
+                <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
+                <div class="flex gap-3">
+                  <button
+                    onclick="openNav()"
+                    id="add-Applicant4"
+                    type="button"
+                    class="btn-primary-only ">
+                    <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
+                  </button>
+                  
+                  <div class="relative" >
+                    <button
+                      onclick="toggleMenu()"
+                      type="button"
+                      class="btn-Tertiary menu-button">
+                      <i class="hgi-stroke hgi-filter-mail-square"></i>
+                    </button>
+                
+                    <div id="popoverMenu" class="flex-col gap-1.5 p-1.5 absolute z-10 mt-1 w-44 bg-white text-nowrap shadow-lg rounded-lg">
+                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
+                        <small class="text-sm font-medium">Follow-up Date</small>
+                      </button>
+                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
+                        <small class="text-sm font-medium">Add Note</small>
+                      </button>
+                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
+                        <small class="text-sm font-medium">Pin to Top</small>
+                      </button>
+                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
+                        <small class="text-sm font-medium">Assign Team</small>
+                      </button>
+                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
+                        <small class="text-sm font-medium">Applicant Profile</small>
+                      </button>
+                      <hr class="w-full text-neutral-300"/>
+                      <div>
+                        <button type="button" class="btn-secondary" onclick="document.location='components.html'">
+                          <small class="text-sm font-medium">Onboard Now</small>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Search for..."
+                  aria-label="Search"
+                  aria-describedby="basic-addon2"
+                />
                 <button
-                onclick="openNav()"
-                id="add-Applicant4"
-                type="button"
-                class="btn-primary-only">
-                <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
+                  type="button"
+                  class="btn-search">
+                  <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
                 </button>
+              </div>
             </div>
 
-            <div class="flex">
-              <input
-              type="text"
-              class="search-input"
-              placeholder="Search for..."
-              aria-label="Search"
-              aria-describedby="basic-addon2"
-              />
-              <button
-                type="button"
-                class="btn-search">
-                <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
-              </button>
-            </div>
-          </div>
-
-        <!--applicant list>list section-->
-          <div class="flex flex-col p-1.5 overflow-y-auto h-[calc(100%-118.8px)]">
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Md. Maraj Hossain</strong>
-                <p>marajmmc@gmail.com</p>
+          <!--applicant list>list section-->
+            <div class="flex flex-col p-1.5 overflow-y-auto h-[calc(100%-118.8px)]">
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Md. Maraj Hossain</strong>
+                  <p>marajmmc@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
               </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Rafiq Ahmed</strong>
-                <p>rafiq@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Rafiq Ahmed</strong>
+                  <p>rafiq@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
               </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail-w">
-                <strong>Tania Begum</strong>
-                <p>taniabegum4040@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail-w">
+                  <strong>Tania Begum</strong>
+                  <p>taniabegum4040@gmail.com</p>
+                </div>
+                  <span class="status-uadded">University Added</span>
               </div>
-                <span class="status-uadded">University Added</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Fahad Chowdhury</strong>
-                <p>fahad@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Fahad Chowdhury</strong>
+                  <p>fahad@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
               </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Rupa Sultana</strong>
-                <p>rupa@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Rupa Sultana</strong>
+                  <p>rupa@gmail.com</p>
+                </div>
+                  <span class="status-onboard">Onboard Applicant</span>
               </div>
-                <span class="status-onboard">Onboard Applicant</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Imran Hossain</strong>
-                <p>imran@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Imran Hossain</strong>
+                  <p>imran@gmail.com</p>
+                </div>
+                  <span class="status-uadded">University Added</span>
               </div>
-                <span class="status-uadded">University Added</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Shifa Akter</strong>
-                <p>shifa@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Shifa Akter</strong>
+                  <p>shifa@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
               </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Niloy Rahman</strong>
-                <p>niloy@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Niloy Rahman</strong>
+                  <p>niloy@gmail.com</p>
+                </div>
+                  <span class="status-uadded">University Added</span>
               </div>
-                <span class="status-uadded">University Added</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Arif Hasan</strong>
-                <p>arif@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Arif Hasan</strong>
+                  <p>arif@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
               </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Md. Maraj Hossain</strong>
-                <p>marajmmc@gmail.com</p>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Md. Maraj Hossain</strong>
+                  <p>marajmmc@gmail.com</p>
+                </div>
+                  <span class="status-onboard">Onboard Applicant</span>
               </div>
-                <span class="status-onboard">Onboard Applicant</span>
             </div>
-          </div>
-      </section>
+        </section>
       <!---add applicant form section -->
       <div id="add-Applicant" class="w-full hidden">
         <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
@@ -344,6 +379,15 @@
 
         <div class="tabcontent p-4 bg-blue-200" id="Onboard">
         <p class="text-2xl text-gray-800 ">Onboard Applicant</p>
+
+        
+            
+
+              
+              
+            
+
+        
         </div>
         <div class="tabcontent p-4 bg-red-200" id="Manage">
             <p class="text-2xl text-gray-800 ">Manage University</p>

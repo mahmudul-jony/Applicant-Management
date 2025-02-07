@@ -4,7 +4,7 @@
 
 .btn-primary {@apply flex items-center justify-center gap-2 px-3 py-2.5 text-sm text-white bg-teal-800 hover:bg-teal-900 hover:text-white rounded-full h-fit transition-colors duration-300 ease-in-out}
 .btn-primary-only {@apply flex items-center justify-center p-2.5 text-white bg-teal-800 rounded-full hover:bg-teal-900 h-fit transition-colors duration-300 ease-in-out}
-.btn-secondary {@apply flex items-center justify-center gap-2 p-2.5 text-sm text-neutral-800 bg-neutral-100 rounded-full h-fit transition-colors duration-300 ease-in-out}
+.btn-secondary {@apply flex items-center gap-2 p-2.5 w-full text-sm text-neutral-800 rounded-xl h-fit hover:bg-neutral-50 transition-colors duration-300 ease-in-out}
 .btn-distractive {@apply flex items-center justify-center gap-2 px-3 py-2.5 text-sm text-red-600 bg-red-100 hover:bg-red-600 hover:text-white rounded-full h-fit transition-colors duration-300 ease-in-out}
 .btn-Tertiary {@apply flex items-center justify-start gap-2 p-2.5 text-neutral-400 rounded-full hover:bg-neutral-100 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 transition-colors duration-300 ease-in-out}
 .btn-link {@apply flex items-center justify-start gap-2 text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
