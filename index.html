@@ -11,7 +11,7 @@
   <div class="flex h-screen">
 
     <!--sidebar section-->
-      <sidebar class="flex flex-col gap-3 p-3 bg-neutral-50">
+      <sidebar  class="flex-col gap-3 p-3 bg-neutral-50">
         <!--brand logo-->
         <div class="p-1.5">
           <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,113 +61,184 @@
         </div>
       </sidebar>
 
-    <!--applicant list section-->
-      <section class="w-[436px] border-x border-neutral-200">
-        <!--appliccant list>head section-->
-          <div class="p-3 flex flex-col gap-3.5 border-b border-neutral-200">
-            <div class="flex justify-between items-center">
-              <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
+    <!--middle section-->
+      <div class="w-[436px] flex border-x border-neutral-200">
+        <!--applicant list section-->
+        <section id="applicant-list" class="w-full">
+          <!--appliccant list>head section-->
+            <div class="p-3 flex flex-col gap-3.5 border-b border-neutral-200">
+              <div class="flex justify-between items-center">
+                <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
+                  <button
+                  onclick="openNav()"
+                  id="add-Applicant"
+                  type="button"
+                  class="btn-primary-only">
+                  <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
+                  </button>
+              </div>
+
+              <div class="flex">
+                <input
+                type="text"
+                class="search-input"
+                placeholder="Search for..."
+                aria-label="Search"
+                aria-describedby="basic-addon2"
+                />
                 <button
-                onclick="openNav()"
-                id="add-Applicant"
-                type="button"
-                class="btn-primary-only">
-                <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
+                  type="button"
+                  class="btn-search">
+                  <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
                 </button>
+              </div>
             </div>
 
-            <div class="flex">
+          <!--applicant list>list section-->
+            <div class="flex flex-col p-1.5 overflow-y-auto h-[calc(100%-118.8px)]">
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Md. Maraj Hossain</strong>
+                  <p>marajmmc@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Rafiq Ahmed</strong>
+                  <p>rafiq@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail-w">
+                  <strong>Tania Begum</strong>
+                  <p>taniabegum4040@gmail.com</p>
+                </div>
+                  <span class="status-uadded">University Added</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Fahad Chowdhury</strong>
+                  <p>fahad@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Rupa Sultana</strong>
+                  <p>rupa@gmail.com</p>
+                </div>
+                  <span class="status-onboard">Onboard Applicant</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Imran Hossain</strong>
+                  <p>imran@gmail.com</p>
+                </div>
+                  <span class="status-uadded">University Added</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Shifa Akter</strong>
+                  <p>shifa@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Niloy Rahman</strong>
+                  <p>niloy@gmail.com</p>
+                </div>
+                  <span class="status-uadded">University Added</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Arif Hasan</strong>
+                  <p>arif@gmail.com</p>
+                </div>
+                  <span class="status-register">Register</span>
+              </div>
+              <div class="applicant-list">
+                <div class="name-mail">
+                  <strong>Md. Maraj Hossain</strong>
+                  <p>marajmmc@gmail.com</p>
+                </div>
+                  <span class="status-onboard">Onboard Applicant</span>
+              </div>
+            </div>
+        </section>
+        <!---add applicant form section -->
+        <div id="add-Applicant" class="w-full h-full hidden border-x border-neutral-200 bg-white overflow-x-hidden">
+          <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+            <button
+              onclick="closeNav()"
+              id="javascript:void(0)"
+              type="button"
+              class="btn-Tertiary closebtn">
+              <i class="hgi-stroke hgi-arrow-left-02"></i>
+            </button>
+            <strong class="text-md font-medium text-neutral-800">Add Applicant</strong>
+          </div>
+
+          <form class="p-3">
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Applicant Name</label>
               <input
               type="text"
-              class="search-input"
-              placeholder="Search for..."
-              aria-label="Search"
-              aria-describedby="basic-addon2"
-              />
-              <button
-                type="button"
-                class="btn-search">
-                <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
-              </button>
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter name"
+              required=""/>
             </div>
-          </div>
 
-        <!--applicant list>list section-->
-          <div class="flex flex-col p-1.5 overflow-y-auto h-[calc(100%-118.8px)]">
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Md. Maraj Hossain</strong>
-                <p>marajmmc@gmail.com</p>
-              </div>
-                <span class="status-register">Register</span>
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Email Address</label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter email address"
+              required=""/>
             </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Rafiq Ahmed</strong>
-                <p>rafiq@gmail.com</p>
-              </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail-w">
-                <strong>Tania Begum</strong>
-                <p>taniabegum4040@gmail.com</p>
-              </div>
-                <span class="status-uadded">University Added</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Fahad Chowdhury</strong>
-                <p>fahad@gmail.com</p>
-              </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Rupa Sultana</strong>
-                <p>rupa@gmail.com</p>
-              </div>
-                <span class="status-onboard">Onboard Applicant</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Imran Hossain</strong>
-                <p>imran@gmail.com</p>
-              </div>
-                <span class="status-uadded">University Added</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Shifa Akter</strong>
-                <p>shifa@gmail.com</p>
-              </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Niloy Rahman</strong>
-                <p>niloy@gmail.com</p>
-              </div>
-                <span class="status-uadded">University Added</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Arif Hasan</strong>
-                <p>arif@gmail.com</p>
-              </div>
-                <span class="status-register">Register</span>
-            </div>
-            <div class="applicant-list">
-              <div class="name-mail">
-                <strong>Md. Maraj Hossain</strong>
-                <p>marajmmc@gmail.com</p>
-              </div>
-                <span class="status-onboard">Onboard Applicant</span>
-            </div>
-          </div>
-      </section>
 
-    <!--right main section-->
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Phone Number</label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter phone number"/>
+            </div>
+
+            <div class="mb-3">
+              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">CRM ID</label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              class="text-input"
+              placeholder="Enter CRM ID"
+              required=""/>
+            </div>
+
+            <div class="col-span-2">
+              <label for="description" class="block mb-2 text-sm font-medium text-gray-900" >Product Description</label>
+              <textarea id="address" rows="3" class="area-input bg-neutral-100" placeholder="Applicant address..."></textarea>
+            </div>
+          </form>
+
+          <div class="flex gap-2 justify-end p-3 border-t border-neutral-200">
+            <button onclick="closeNav()" id="javascript:void(0)" type="button" class="btn-distractive closebtn"> Cancel</button>
+            <button id="save" type="button" class="btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+
+    <!--main section-->
       <main class="flex flex-col w-full">
         <!--main>head section-->
           <div class="applicant-head grid p-3 gap-1">
@@ -313,135 +384,9 @@
           </form>
       </main>
 
-    <!---Modal>add-Applicant -->
-      <div id="mySidenav" class="sidenav h-full fixed ml-16 border-x border-neutral-200 bg-white overflow-x-hidden transition-all duration-300 ease-in-out">
-        <div class="w-[324.95px]">
-
-          <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
-            <button
-              onclick="closeNav()"
-              id="javascript:void(0)"
-              type="button"
-              class="btn-Tertiary closebtn">
-              <i class="hgi-stroke hgi-arrow-left-02"></i>
-            </button>
-            <strong class="text-md font-medium text-neutral-800">Add Applicant</strong>
-          </div>
-
-          <form class="p-3">
-            <div class="mb-3">
-              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Applicant Name</label>
-              <input
-              type="text"
-              name="name"
-              id="name"
-              class="text-input"
-              placeholder="Enter name"
-              required=""/>
-            </div>
-
-            <div class="mb-3">
-              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Email Address</label>
-              <input
-              type="text"
-              name="name"
-              id="name"
-              class="text-input"
-              placeholder="Enter email address"
-              required=""/>
-            </div>
-
-            <div class="mb-3">
-              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Phone Number</label>
-              <input
-              type="text"
-              name="name"
-              id="name"
-              class="text-input"
-              placeholder="Enter phone number"/>
-            </div>
-
-            <div class="mb-3">
-              <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">CRM ID</label>
-              <input
-              type="text"
-              name="name"
-              id="name"
-              class="text-input"
-              placeholder="Enter CRM ID"
-              required=""/>
-            </div>
-
-            <div class="col-span-2">
-              <label for="description" class="block mb-2 text-sm font-medium text-gray-900" >Product Description</label>
-              <textarea id="address" rows="3" class="area-input bg-neutral-100" placeholder="Applicant address..."></textarea>
-            </div>
-          </form>
-
-          <div class="flex gap-2 justify-end p-3 border-t border-neutral-200">
-            <button onclick="closeNav()" id="javascript:void(0)" type="button" class="btn-distractive closebtn"> Cancel</button>
-            <button id="save" type="button" class="btn-primary">Save</button>
-          </div>
-        </div>
-      </div>
-          
-    <!--script for add applicant-->
-      <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "326px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-      </script>
-
-    <!-- <script>
-    let modal = document.getElementById("add-applicant-modal");
-    let btn = document.getElementById("add-Applicant");
-    let button = document.getElementById("Close");
-
-    btn.onclick = function () {
-      modal.style.display = "block";
-    };
-    button.onclick = function () {
-      modal.style.display = "none";
-    };
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-    </script> -->
-
-    <!--script for tab-->
-      <script>
-      function openmain(evt, main) {
-      var i, tabcontent, tablinks;
-
-      tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-        }
-
-      tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].classList.remove("text-teal-800", "border-b", "border-teal-800");
-        }
-
-      document.getElementById(main).style.display = "block";
-
-      evt.currentTarget.classList.add("text-teal-800", "border-b", "border-teal-800");
-      }
-
-      document.getElementById("Activity-tab").click();
-      </script>
-
-    <!--script for datepicker-->
-      <script
-      src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js">
-      </script>
-
+    <!--scripts-->
+    <script src="js/addapplicant.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
   </div>
 </body>
 </html>
