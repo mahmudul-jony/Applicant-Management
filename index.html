@@ -61,15 +61,14 @@
     </sidebar>
 
   <!--middle section-->
-    <div class="w-96 flex border-x border-neutral-200">
-      
+    <div class="min-w-80 border-x flex border-neutral-200">
       <!--applicant list section-->
         <section id="applicant-list" class="w-full">
           <!--appliccant list>head section-->
             <div class="p-3 flex flex-col gap-3.5 border-b border-neutral-200">
-              <div class="flex justify-between items-center">
-                <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
-                <div class="flex gap-3">
+              <!--appliccant list>title section-->
+                <div class="flex justify-between items-center">
+                  <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
                   <button
                     onclick="openNav()"
                     id="add-Applicant4"
@@ -77,56 +76,22 @@
                     class="btn-primary-only ">
                     <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
                   </button>
-                  
-                  <div class="relative" >
-                    <button
-                      onclick="toggleMenu()"
-                      type="button"
-                      class="btn-Tertiary menu-button">
-                      <i class="hgi-stroke hgi-filter-mail-square"></i>
-                    </button>
-                
-                    <div id="popoverMenu" class="flex-col gap-1.5 p-1.5 absolute z-10 mt-1 w-44 bg-white text-nowrap shadow-lg rounded-lg">
-                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
-                        <small class="text-sm font-medium">Follow-up Date</small>
-                      </button>
-                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
-                        <small class="text-sm font-medium">Add Note</small>
-                      </button>
-                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
-                        <small class="text-sm font-medium">Pin to Top</small>
-                      </button>
-                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
-                        <small class="text-sm font-medium">Assign Team</small>
-                      </button>
-                      <button type="button" class="btn-secondary" onclick="document.location='components.html'">
-                        <small class="text-sm font-medium">Applicant Profile</small>
-                      </button>
-                      <hr class="w-full text-neutral-300"/>
-                      <div>
-                        <button type="button" class="btn-secondary" onclick="document.location='components.html'">
-                          <small class="text-sm font-medium">Onboard Now</small>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-
-              <div class="flex">
-                <input
-                  type="text"
-                  class="search-input"
-                  placeholder="Search for..."
-                  aria-label="Search"
-                  aria-describedby="basic-addon2"
-                />
-                <button
-                  type="button"
-                  class="btn-search">
-                  <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
-                </button>
-              </div>
+              <!--appliccant list>search section-->
+                <div class="flex">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search for..."
+                    aria-label="Search"
+                    aria-describedby="basic-addon2"
+                  />
+                  <button
+                    type="button"
+                    class="btn-search">
+                    <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
+                  </button>
+                </div>
             </div>
 
           <!--applicant list>list section-->
@@ -204,85 +169,121 @@
             </div>
         </section>
       <!---add applicant form section -->
-      <div id="add-Applicant" class="w-full hidden">
-        <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
-          <button
-            onclick="closeNav()"
-            id="javascript:void(0)"
-            type="button"
-            class="btn-Tertiary closebtn">
-            <i class="hgi-stroke hgi-arrow-left-02"></i>
-          </button>
-          <strong class="text-md font-medium text-neutral-800">Add Applicant</strong>
+        <div id="add-Applicant" class="w-full hidden">
+          <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+            <button
+              onclick="closeNav()"
+              id="javascript:void(0)"
+              type="button"
+              class="btn-Tertiary closebtn">
+              <i class="hgi-stroke hgi-arrow-left-02"></i>
+            </button>
+            <strong class="text-md font-medium text-neutral-800">Add Applicant</strong>
+          </div>
+          <div class="p-3 flex flex-col gap-9">
+            <form action="">
+              <div class="mb-3">
+                <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Applicant Name</label>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="text-input"
+                placeholder="Enter name"
+                required=""/>
+              </div>
+  
+              <div class="mb-3">
+                <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Email Address</label>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="text-input"
+                placeholder="Enter email address"
+                required=""/>
+              </div>
+  
+              <div class="mb-3">
+                <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Phone Number</label>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="text-input"
+                placeholder="Enter phone number"/>
+              </div>
+  
+              <div class="mb-3">
+                <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">CRM ID</label>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="text-input"
+                placeholder="Enter CRM ID"
+                required=""/>
+              </div>
+  
+              <div class="col-span-2">
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900" >Product Description</label>
+                <textarea id="address" rows="3" class="area-input bg-neutral-100" placeholder="Applicant address..."></textarea>
+              </div>
+            </form>
+            <div class="flex gap-2 justify-end">
+              <button onclick="closeNav()" id="javascript:void(0)" type="button" class="btn-distractive closebtn"> Cancel</button>
+              <button id="save" type="button" class="btn-primary">Save</button>
+            </div>
+          </div>
         </div>
-
-        <form class="p-3">
-          <div class="mb-3">
-            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Applicant Name</label>
-            <input
-            type="text"
-            name="name"
-            id="name"
-            class="text-input"
-            placeholder="Enter name"
-            required=""/>
-          </div>
-
-          <div class="mb-3">
-            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Email Address</label>
-            <input
-            type="text"
-            name="name"
-            id="name"
-            class="text-input"
-            placeholder="Enter email address"
-            required=""/>
-          </div>
-
-          <div class="mb-3">
-            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Phone Number</label>
-            <input
-            type="text"
-            name="name"
-            id="name"
-            class="text-input"
-            placeholder="Enter phone number"/>
-          </div>
-
-          <div class="mb-3">
-            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">CRM ID</label>
-            <input
-            type="text"
-            name="name"
-            id="name"
-            class="text-input"
-            placeholder="Enter CRM ID"
-            required=""/>
-          </div>
-
-          <div class="col-span-2">
-            <label for="description" class="block mb-2 text-sm font-medium text-gray-900" >Product Description</label>
-            <textarea id="address" rows="3" class="area-input bg-neutral-100" placeholder="Applicant address..."></textarea>
-          </div>
-        </form>
-
-        <div class="flex gap-2 justify-end p-3 border-t border-neutral-200">
-          <button onclick="closeNav()" id="javascript:void(0)" type="button" class="btn-distractive closebtn"> Cancel</button>
-          <button id="save" type="button" class="btn-primary">Save</button>
-        </div>
-      </div>
     </div>
 
   <!--main section-->
     <main class="flex flex-col w-full">
       <!--main>head section-->
-        <div class="applicant-head grid p-3 gap-1">
-          <div class="flex gap-2 items-center">
-            <strong>Md. Maraj Hossain</strong>
-            <span class="badge-Register">Register</span>
-          </div>
+        <div class="flex items-center justify-between p-3" >
+          <div class="applicant-head grid gap-1">
+            <div class="flex gap-2 items-center">
+              <strong>Md. Maraj Hossain</strong>
+              <span class="badge-Register">Register</span>
+            </div>
             <p>marajmmc@gmail.com</p>
+          </div>
+          <div>
+            <button
+              id="btn-more"
+              type="button"
+              class="btn-Tertiary-only">
+              <i class="hgi-stroke hgi-more-vertical"></i>
+            </button>
+            <div id="popoverMenu" class="absolute p-1.5 z-10 w-44 border-t border-neutral-300 bg-white shadow-lg rounded-lg">
+              <div class="flex flex-col gap-1.5 text-nowrap " >
+                <button type="button" class="btn-secondary" >
+                  <small class="text-sm font-medium">Follow-up Date</small>
+                </button>
+                <button type="button" class="btn-secondary" >
+                  <small class="text-sm font-medium">Add Note</small>
+                </button>
+                <button type="button" class="btn-secondary" >
+                  <small class="text-sm font-medium">Pin to Top</small>
+                </button>
+                <button type="button" class="btn-secondary" >
+                  <small class="text-sm font-medium">Assign Team</small>
+                </button>
+                <button type="button" class="btn-secondary">
+                  <small class="text-sm font-medium">Applicant Profile</small>
+                </button>
+                <hr class="w-full text-neutral-300"/>
+                <button type="button" class="btn-secondary" onclick="openonboard()">
+                  <small class="text-sm font-medium">Onboard Now</small>
+                </button>
+              </div>
+            </div>
+            
+          </div>
         </div>
+        
+        
       <!--main>head section>Tab-->
         <div class="flex flex-wrap px-2 border-y border-neutral-200">
           <button class="tablinks btn-tab" id="Activity-tab" onclick="openmain(event, 'Activity')">Activity history</button>
@@ -380,14 +381,6 @@
         <div class="tabcontent p-4 bg-blue-200" id="Onboard">
         <p class="text-2xl text-gray-800 ">Onboard Applicant</p>
 
-        
-            
-
-              
-              
-            
-
-        
         </div>
         <div class="tabcontent p-4 bg-red-200" id="Manage">
             <p class="text-2xl text-gray-800 ">Manage University</p>
@@ -428,9 +421,50 @@
         </form>
     </main>
 
+  <!--modals section-->
+
+        <div id="applicant-onboard" class="hidden w-2/5 border-x border-neutral-200">
+          <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+            <button
+              onclick="closeonboard()"
+              id="javascript:void(0)"
+              type="button"
+              class="btn-Tertiary">
+              <i class="hgi-stroke hgi-cancel-01"></i>
+            </button>
+            <strong class="text-md font-medium text-neutral-800">Onboard Applicant</strong>
+          </div>
+          <form class="flex flex-col gap-9 px-6 py-9">
+            <div class="applicant-head grid gap-3 justify-items-center">
+              <img class="details-avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
+                <div class="justify-items-center">
+                  <strong>Md. Maraj Hossain</strong>
+                  <p>marajmmc@gmail.com</p>
+                </div>        
+            </div>
+            <hr class="w-full text-neutral-300"/>
+            <div class="flex gap-3">
+              <div class="p-3 bg-red-50 rounded-full h-fit">
+                <i class="hgi-stroke hgi-information-circle"></i>
+              </div>
+                <div class="justify-items-left">
+                  <span>You are going to onboard this applicant</span>
+                  <p class="text-sm text-neutral-400">By onboarding this applicant will be a permeant user to this system. You are allowing to chat and share documents with assigned team.</p>
+                </div>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="closeonboard()" id="javascript:void(0)" type="button" class="btn-distractive w-full"> Cancel</button>
+              <button id="save" type="button" class="btn-primary w-full">Yes, Confirm</button>
+            </div>
+          </form>
+        </div>
+
+
   <!--scripts-->
     <script src="js/addapplicant.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
+
+    
   
 </body>
 </html>
