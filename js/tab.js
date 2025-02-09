@@ -1,20 +1,22 @@
-// script for tab
-function openmain(evt, main) {
-    var i, tabcontent, tablinks;
+function openTab(event, tabId) {
+    // Hide all tab containers
+    document.querySelectorAll('.tab-container').forEach(tab => {
+        tab.classList.add('hidden');
+    });
     
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-    }
+    // Remove active styling from all buttons
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.classList.remove('bg-blue-600', 'text-white');
+        button.classList.add('bg-gray-400', 'text-black');
+    });
     
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("text-teal-800", "border-b", "border-teal-800");
-    }
-    
-    document.getElementById(main).style.display = "block";
-    
-    evt.currentTarget.classList.add("text-teal-800", "border-b", "border-teal-800");
-    }
-    
-    document.getElementById("Activity-tab").click();
+    // Show the selected tab and apply active styling to the button
+    document.getElementById(tabId).classList.remove('hidden');
+    event.currentTarget.classList.add('bg-blue-600', 'text-white');
+    event.currentTarget.classList.remove('bg-gray-400', 'text-black');
+}
+
+// Set the default active tab on page load
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".tab-button").click();
+});

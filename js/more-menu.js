@@ -1,15 +1,15 @@
 // script for onboard modal
-function openonboard() {
+function openonboardapplicantmodal() {
     document.getElementById("applicant-onboard").style.display = "block";
     }
     
-    function closeonboard() {
+    function closeonboardapplicantmodal() {
     document.getElementById("applicant-onboard").style.display = "none";
     }
-    
+
 // // script for menu
 const button = document.getElementById("btn-more");
-        const popover = document.getElementById("popoverMenu");
+        const popover = document.getElementById("more-menu");
 
         function togglePopover() {
             if (popover.style.display === "none" || popover.style.display === "") {
