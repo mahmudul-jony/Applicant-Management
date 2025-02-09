@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"/>
+  <link rel="stylesheet" href="/src/input.css">
+
+</head>
+<body class="font-serif flex h-screen">
+    
+    <!--sidebar section-->
+        <sidebar class="flex flex-col gap-3 p-3">
+            <!--brand logo-->
+            <div class="p-1.5">
+                <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35 20C35 28.2843 28.2843 35 20 35C16.8402 35 13.9086 34.023 11.4908 32.3546L6.36364 33.6364L7.7072 28.598C6.00116 26.1633 5 23.1986 5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 37.5C29.665 37.5 37.5 29.665 37.5 20C37.5 10.335 29.665 2.5 20 2.5C10.335 2.5 2.5 10.335 2.5 20C2.5 23.1386 3.32625 26.0842 4.77309 28.6312L2.5 37.5L11.6436 35.3798C14.1267 36.7318 16.9736 37.5 20 37.5ZM20 34.8077C28.1781 34.8077 34.8077 28.1781 34.8077 20C34.8077 11.8219 28.1781 5.19231 20 5.19231C11.8219 5.19231 5.19231 11.8219 5.19231 20C5.19231 23.1576 6.18063 26.0843 7.8648 28.4878L6.53846 33.4615L11.5999 32.1962C13.9867 33.8432 16.8807 34.8077 20 34.8077Z" fill="#57B347"/>
+                <path d="M15.625 11.8752C15.2089 11.0395 14.5707 11.1135 13.9258 11.1135C12.7735 11.1135 10.9766 12.4938 10.9766 15.0628C10.9766 17.1682 11.9043 19.4729 15.0305 22.9205C18.0476 26.2477 22.0117 27.9689 25.3027 27.9103C28.5938 27.8517 29.2709 25.0197 29.2709 24.0633C29.2709 23.6394 29.0078 23.4279 28.8266 23.3704C27.7051 22.8322 25.6367 21.8293 25.166 21.6409C24.6954 21.4524 24.4497 21.7073 24.2969 21.8459C23.8701 22.2527 23.0241 23.4513 22.7344 23.7209C22.4447 23.9906 22.0129 23.8541 21.8331 23.7522C21.1718 23.4868 19.3787 22.6892 17.9493 21.3036C16.1817 19.5901 16.0779 19.0005 15.7449 18.4758C15.4784 18.0559 15.674 17.7983 15.7715 17.6858C16.1524 17.2463 16.6783 16.5679 16.9141 16.2307C17.1499 15.8935 16.9627 15.3816 16.8504 15.0628C16.3672 13.6916 15.9579 12.5438 15.625 11.8752Z" fill="#57B347"/>
+                </svg>
+            </div>
+            <hr class="w-full text-neutral-300"/>
+
+            <!--middle menu-->
+            <div class="flex flex-col gap-0.5 h-full">
+                <button
+                    onclick="document.location='index.html'"
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-stroke hgi-dashboard-browsing"></i>
+                </button>
+
+                <button
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-stroke hgi-user-multiple-02"></i>
+                </button>
+
+                <button
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-stroke hgi-task-daily-02"></i>
+                </button>
+
+                <button
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-stroke hgi-notification-02"></i>
+                </button>
+
+            </div>
+            <hr class="w-full text-neutral-300"/>
+            
+            <!--end menu-->
+            <div class="flex flex-col gap-0.5">
+                <button
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-stroke hgi-settings-02"></i>
+                </button>
+
+                <button
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-stroke hgi-user-circle-02"></i>
+                </button>
+            </div>
+        </sidebar>
+
+    <!--middle section-->
+        <section class="min-w-80 border-x flex border-neutral-200">
+            
+            <!--applicant list section-->
+            <div id="applicant-list-section" class="w-full">
+
+                <!--Apllicant list title-->
+                <div class="flex p-3 justify-between items-center">
+                    <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
+                    <button
+                        onclick="openaddapplicantmodal()"
+                        class="btn-primary-only">
+                        <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
+                    </button>
+                </div>
+
+                <!--search field-->
+                <div class="flex p-3 border-b border-neutral-200">
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Search for..."
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                    />
+                    <button
+                        class="btn-search">
+                        <i class="hgi-stroke hgi-stroke hgi-search-01"></i>
+                    </button>
+                </div>
+
+            <!--applicant list-->
+                <div class="flex flex-col p-1.5 overflow-y-auto h-[calc(100%-128.8px)]">
+                    <div class="applicant-list">
+                        <div class="name-mail">
+                            <strong>Md. Maraj Hossain</strong>
+                            <p>marajmmc@gmail.com</p>
+                        </div>
+                        <span class="status-register">Register</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!---add applicant modal-->
+            <div id="add-Applicant-modal" class="w-full hidden">
+
+                <!--add applicant header-->
+                <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+                    <button
+                        onclick="closeaddapplicantmodal()"
+                        class="btn-Tertiary closebtn">
+                        <i class="hgi-stroke hgi-arrow-left-02"></i>
+                    </button>
+                    <strong class="text-md font-medium text-neutral-800">Add Applicant</strong>
+                </div>
+
+                <!--add applicant content-->
+                <div class="p-3 flex flex-col gap-9">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Applicant Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                class="text-input"
+                                placeholder="Enter name"
+                                required=""
+                            />
+                        </div>
+                    </form>
+
+                    <!--add applicant footer buttons-->
+                    <div class="flex gap-2 justify-end">
+                        <button
+                            onclick="closeaddapplicantmodal()"
+                            class="btn-distractive closebtn">
+                            Cancel
+                        </button>
+                        <button
+                            id="save"
+                            class="btn-primary">
+                            Save
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <!--main-->
+        <main class="flex flex-col w-full">
+            
+            <!--top-->
+            <div class="flex items-center justify-between p-3" >
+
+                <!--applicant head-->
+                <div class="applicant-head grid gap-1">
+                    <div class="flex gap-2 items-center">
+                        <strong>Md. Maraj Hossain</strong>
+                        <span class="badge-Register">Register</span>
+                    </div>
+                    <p>marajmmc@gmail.com</p>
+                </div>
+
+                <!--more button-->
+                <button
+                class="btn-Tertiary-only">
+                <i class="hgi-stroke hgi-more-vertical"></i>
+                </button>
+
+                <!--popover menu-->
+                <div class="absolute p-1.5 z-10 w-44 border-t border-neutral-300 bg-white shadow-lg rounded-lg">
+                    <div class="flex flex-col gap-1.5 text-nowrap " >
+                        <button 
+                            class="btn-secondary">
+                            <small class="text-sm font-medium">Applicant Profile</small>
+                        </button>
+                        <hr class="w-full text-neutral-300"/>
+                        <button
+                            class="btn-secondary"
+                            onclick="openonboard()">
+                            <small class="text-sm font-medium">Onboard Now</small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Tab buttons-->
+            <div class="flex flex-wrap px-2 border-y border-neutral-200">
+                <button
+                    class="tab-button active btn-tab"
+                    onclick="openTab(event, 'activity-history')">
+                    Activity history
+                </button>
+
+                <button
+                    class="tab-button btn-tab"
+                    onclick="openTab(event, 'onboard-applicant')">
+                    Onboard Applicant
+                </button>
+
+                <button
+                    class="tab-button btn-tab"
+                    onclick="openTab(event, 'profile')">
+                    Profile
+                </button>
+
+                <button
+                    class="tab-button btn-tab"
+                    onclick="openTab(event, 'manage-university')">
+                    Manage University
+                </button>
+            </div>
+
+            <!--tab pages-->
+            <div class="h-full">
+                <div class="tab-container active p-4 bg-neutral-100" id="activity-history">
+                    <p class="text-2xl text-neutral-800">Activity History</p>
+                </div>
+                <div class="tab-container hidden p-4 bg-neutral-100" id="onboard-applicant">
+                    <p class="text-2xl text-neutral-800">Onboard Applicant</p>
+                </div>
+                <div class="tab-container hidden p-4 bg-neutral-100" id="manage-university">
+                    <p class="text-2xl text-neutral-800">Manage University</p>
+                </div>
+                <div class="tab-container hidden p-4 bg-neutral-100" id="profile">
+                    <p class="text-2xl text-neutral-800">Profile</p>
+                </div>
+            </div>
+            
+            <!--chat-->
+            <form class="p-3 grid grid-flow-row gap-3 border-t border-neutral-200">
+                <div class="flex items-center justify-between">
+                    <div class="flex gap-6 items-center">
+                        <button
+                            class="btn-link">
+                            <i class="hgi-stroke hgi-user-circle-02"></i>
+                            <p class="text-sm font-normal" >Assign</p>
+                        </button>
+                        <button
+                            id="btn-date"
+                            class="btn-primary">
+                            Select Date & Time
+                        </button>
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn-primary-only">
+                        <i class="hgi-stroke hgi-stroke hgi-navigation-03"></i>
+                    </button>
+                </div>
+            </form>
+
+        </main>
+
+    <!--modals section-->
+        <div id="applicant-onboard" class="hidden w-2/5 border-x border-neutral-200">
+            <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+                    <button
+                        onclick="closeonboard()"
+                        
+                        class="btn-Tertiary">
+                        <i class="hgi-stroke hgi-cancel-01"></i>
+                    </button>
+                    <strong class="text-md font-medium text-neutral-800">Onboard Applicant</strong>
+            </div>
+
+            <form class="flex flex-col gap-9 px-6 py-9">
+                <div class="justify-items-left">
+                    <span>You are going to onboard this applicant</span>
+                    <p class="text-sm text-neutral-400">By onboarding this applicant will be a permeant user to this system. You are allowing to chat and share documents with assigned team.</p>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        onclick="closeonboard()"
+                        class="btn-distractive w-full">
+                        Cancel
+                    </button>
+                    <button
+                        id="save"
+                        class="btn-primary w-full">
+                        Yes, Confirm
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    <!--scripts-->
+        <script src="js/addapplicant.js"></script>
+        <script src="js/newtab.js"></script>
+
+  
+    
+</body>
+</html>
