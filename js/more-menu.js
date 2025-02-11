@@ -1,10 +1,19 @@
-// script for onboard modal
+// script for onboard applicant modal
 function openonboardapplicantmodal() {
     document.getElementById("applicant-onboard").style.display = "block";
     }
     
     function closeonboardapplicantmodal() {
     document.getElementById("applicant-onboard").style.display = "none";
+    }
+
+// script for applicant profile modal
+function openapplicantprofilemodal() {
+    document.getElementById("applicant-profile").style.display = "block";
+    }
+    
+    function closeapplicantprofilemodal() {
+    document.getElementById("applicant-profile").style.display = "none";
     }
 
 // // script for menu

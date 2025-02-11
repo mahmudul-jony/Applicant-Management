@@ -2,56 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+small {@apply text-xs font-normal}
+span {@apply text-xs font-medium}
+p {@apply text-sm font-normal}
+label {@apply text-sm font-normal}
+b {@apply text-sm font-medium}
+H4 {@apply text-base font-medium}
+H3 {@apply text-lg font-semibold}
+H2 {@apply text-xl font-semibold}
+H1 {@apply text-2xl font-semibold}
+
 .btn-primary {@apply flex items-center justify-center gap-2 px-3 py-2.5 text-sm text-white bg-teal-800 hover:bg-teal-900 hover:text-white rounded-full h-fit transition-colors duration-300 ease-in-out}
 .btn-primary-only {@apply flex items-center justify-center p-2.5 text-white bg-teal-800 rounded-full hover:bg-teal-900 h-fit transition-colors duration-300 ease-in-out}
-.btn-secondary {@apply flex items-center gap-2 p-2.5 w-full text-sm text-neutral-800 rounded-xl h-fit hover:bg-neutral-50 transition-colors duration-300 ease-in-out}
+.btn-secondary {@apply flex items-center gap-2 p-2.5 w-full text-neutral-800 rounded-xl h-fit hover:bg-neutral-50 transition-colors duration-300 ease-in-out}
 .btn-secondary-only {@apply flex items-center gap-2 p-2.5 w-fit h-fit text-sm text-neutral-800 rounded-xl hover:bg-neutral-50 transition-colors duration-300 ease-in-out}
 .btn-distractive {@apply flex items-center justify-center gap-2 px-3 py-2.5 text-sm text-red-600 bg-red-100 hover:bg-red-600 hover:text-white rounded-full h-fit transition-colors duration-300 ease-in-out}
 .btn-Tertiary {@apply flex items-center justify-start gap-2 p-2.5 text-neutral-400 rounded-full hover:bg-neutral-100 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 transition-colors duration-300 ease-in-out}
 .btn-Tertiary-only {@apply flex items-center justify-start gap-2 p-2.5 w-fit h-fit text-neutral-400 rounded-full hover:bg-neutral-100 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 transition-colors duration-300 ease-in-out}
 .btn-link {@apply flex items-center justify-start gap-2 text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 .btn-date-picker {@apply block w-full ps-7 text-sm placeholder-neutral-400 hover:placeholder-neutral-800 focus:outline-none transition-colors duration-300 ease-in-out}
-.btn-tab {@apply p-2.5 text-sm font-medium text-center text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
+.btn-tab {@apply p-2.5 text-center text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 
+.chat-input {@apply resize-none w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border-b border-neutral-100 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
+.area-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
 .text-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
 .search-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 rounded-l-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
 .btn-search {@apply flex items-center justify-center p-2.5 text-neutral-400 bg-neutral-100 rounded-r-lg hover:bg-neutral-200 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 
 .hgi-stroke {@apply w-5 h-5 flex items-center justify-center text-xl leading-5}
 
-.badge-Register {@apply px-1.5 py-1 text-xs text-green-600 bg-neutral-50 rounded-md border border-neutral-200 h-fit}
-.badge-onboard {@apply px-1.5 py-1 text-xs text-red-600 bg-neutral-50 rounded-md border border-neutral-200  h-fit}
+.badge-Register {@apply px-1.5 py-1 text-green-600 bg-neutral-50 rounded-md border border-neutral-200 h-fit}
+.badge-onboard {@apply px-1.5 py-1 text-red-600 bg-neutral-50 rounded-md border border-neutral-200  h-fit}
 
 .status-register {@apply text-green-600}
 .status-uadded {@apply text-yellow-500}
 .status-onboard {@apply text-red-600}
 
 .applicant-list {@apply p-3 flex justify-between items-center rounded-xl hover:bg-neutral-50 transition-all duration-300 ease-in-out}
-.applicant-list strong {@apply text-sm text-neutral-800 font-medium truncate}
-.applicant-list p {@apply text-sm text-neutral-400 truncate}
-.applicant-list span {@apply text-xs font-medium text-right text-nowrap}
+.applicant-list strong {@apply text-neutral-800 font-medium truncate}
+.applicant-list p {@apply text-neutral-400 truncate}
+.applicant-list span {@apply text-right text-nowrap}
 .name-mail-w {@apply grid w-40}
 
-.applicant-head strong {@apply text-lg text-neutral-800 font-medium}
-.applicant-head p {@apply text-sm text-neutral-400}
+.applicant-head strong {@apply text-neutral-800 font-medium}
+.applicant-head p {@apply text-neutral-400}
 
-.chat-input {@apply resize-none w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border-b border-neutral-100 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
-.area-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
-
-.date {@apply flex items-center text-xs text-nowrap mx-2 text-neutral-800 my-1.5}
+.date {@apply flex items-center text-nowrap mx-2 text-neutral-800 my-1.5}
 .avatar {@apply size-8 rounded-full ring-1 ring-neutral-200 bg-neutral-100}
 .details-avatar {@apply size-16 rounded-full ring-1 ring-neutral-200 bg-neutral-100}
 .created-by {@apply flex items-center gap-3 my-1.5}
-.created-by p {@apply text-sm text-nowrap text-neutral-800}
-.created-by span {@apply text-sm font-medium text-nowrap}
+.created-by p {@apply text-nowrap text-neutral-800}
+.created-by span {@apply text-nowrap}
 
 .chat-system {@apply ml-11 my-3 rounded-xl bg-teal-500 border-b border-neutral-300 p-3 w-fit}
-.chat-system strong {@apply text-sm font-medium text-neutral-800}
-.chat-system p {@apply text-sm text-neutral-800}
+.chat-system strong {@apply text-neutral-800}
+.chat-system p {@apply text-neutral-800}
 
 .chat-discusation {@apply ml-11 my-3 rounded-xl bg-white border-b border-neutral-300 p-3 w-fit}
-.chat-discusation strong {@apply text-sm font-medium text-neutral-800}
-.chat-discusation p {@apply text-sm text-neutral-800}
+.chat-discusation strong {@apply text-neutral-800}
+.chat-discusation p {@apply text-neutral-800}
 .follow-up-b {@apply rounded-xl rounded-t-none border border-t-0 border-r-0 border-teal-800 pt-3}
 .follow-up-bg {@apply rounded-xl bg-teal-500 p-3}
 

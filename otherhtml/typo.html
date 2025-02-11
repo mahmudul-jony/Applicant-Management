@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Typography & Text Example</title>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        small {font-size: 40px;}
+        span {font-size: 40px;}
+        p {font-size: 40px;}
+        b {font-size: 40px;}
+        H4 {font-size: 40px;}
+        H3 {font-size: 40px;}
+        H2 {font-size: 40px;}
+        H1 {font-size: 40px;}
+
+        hr { margin: 20px 0; }
+        pre, code {
+            background: #f4f4f4;
+            padding: 10px;
+            display: block;
+        }
+        mark { background-color: yellow; }
+        del { color: red; }
+        ins { color: green; text-decoration: none; border-bottom: 2px solid green; }
+    </style>
+</head>
+<body>
+
+    <button
+                    type="button"
+                    onclick="document.location='index.html'"
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-stroke hgi-settings-02"></i>
+                </button>
+
+
+    <p>This is a paragraph of text.</p>
+    <span>This is a paragraph of text.</span><br>
+    <small>Small text</small>
+
+    <hr>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <hr>
+
+    <b>Bold text</b><br>
+    <strong>Strong emphasis (bold)</strong><br>
+
+    <hr>
+
+    <i>Italic text</i><br>
+    <em>Emphasized text (italic)</em><br>
+    <u>Underlined text</u><br>
+    <s>Strikethrough text</s><br>
+    <mark>Highlighted text</mark><br>
+    <sub>Subscript text</sub> and <sup>Superscript text</sup><br>
+
+    <hr>
+
+    <del>Deleted text</del><br>
+    <ins>Inserted text</ins><br>
+
+    <hr>
+
+    <abbr title="World Health Organization">WHO</abbr><br>
+    <cite>Citation of a book, article, or source</cite>
+
+    <hr>
+
+    <code>Inline code example</code><br>
+    <pre>
+        function sayHello() {
+            console.log("Hello, World!");
+        }
+    </pre>
+
+    <hr>
+
+    <kbd>Ctrl + C</kbd> (Keyboard shortcut)<br>
+    <samp>Sample terminal output</samp><br>
+    <var>Variable name example</var>
+
+    <hr>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+
+    <h3>Description List</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <hr>
+
+    <h2>Address & Time</h2>
+    <address>Contact: info@example.com</address><br>
+    <time datetime="2024-02-11">February 11, 2024</time>
+
+    <hr>
+
+    <h2>Ruby Annotation (For Asian Text)</h2>
+    <ruby>漢 <rt>hàn</rt> 字 <rt>zì</rt></ruby>
+
+    <hr>
+
+    <h2>Bidirectional Text</h2>
+    <bdi>مرحبا</bdi> (Isolated Arabic text)<br>
+    <bdo dir="rtl">This text runs from right to left.</bdo>
+
+    <hr>
+
+    <h2>Word Break</h2>
+    This is a veryveryvery<wbr>longword that will break.
+
+</body>
+</html>

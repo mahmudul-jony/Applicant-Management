@@ -55,6 +55,7 @@
             <div class="flex flex-col gap-0.5">
                 <button
                     type="button"
+                    onclick="document.location='typo.html'"
                     class="btn-Tertiary">
                     <i class="hgi-stroke hgi-stroke hgi-settings-02"></i>
                 </button>
@@ -75,7 +76,7 @@
 
                 <!--Apllicant list title-->
                 <div class="flex p-3 justify-between items-center">
-                    <strong class="text-xl font-semibold text-neutral-800">Applicant List</strong>
+                    <h1 class="text-xl font-semibold text-neutral-800">Applicant List</h1>
                     <button
                         type="button"
                         onclick="openaddapplicantmodal()"
@@ -104,70 +105,70 @@
                 <div class="flex flex-col p-1.5 overflow-y-auto h-[calc(100%-128.8px)]">
                     <div class="applicant-list">
                         <div class="name-mail">
-                            <strong>Md. Maraj Hossain</strong>
+                            <h4>Md. Maraj Hossain</h4>
                             <p>marajmmc@gmail.com</p>
                         </div>
                         <span class="status-register">Register</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Rafiq Ahmed</strong>
+                          <h4>Rafiq Ahmed</h4>
                           <p>rafiq@gmail.com</p>
                         </div>
                         <span class="status-register">Register</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail-w">
-                          <strong>Tania Begum</strong>
+                          <h4>Tania Begum</h4>
                           <p>taniabegum4040@gmail.com</p>
                         </div>
                         <span class="status-uadded">University Added</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Fahad Chowdhury</strong>
+                          <h4>Fahad Chowdhury</h4>
                           <p>fahad@gmail.com</p>
                         </div>
                         <span class="status-register">Register</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Rupa Sultana</strong>
+                          <h4>Rupa Sultana</h4>
                           <p>rupa@gmail.com</p>
                         </div>
                         <span class="status-onboard">Onboard Applicant</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Imran Hossain</strong>
+                          <h4>Imran Hossain</h4>
                           <p>imran@gmail.com</p>
                         </div>
                         <span class="status-uadded">University Added</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Shifa Akter</strong>
+                          <h4>Shifa Akter</h4>
                           <p>shifa@gmail.com</p>
                         </div>
                         <span class="status-register">Register</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Niloy Rahman</strong>
+                          <h4>Niloy Rahman</h4>
                           <p>niloy@gmail.com</p>
                         </div>
                         <span class="status-uadded">University Added</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Arif Hasan</strong>
+                          <h4>Arif Hasan</h4>
                           <p>arif@gmail.com</p>
                         </div>
                         <span class="status-register">Register</span>
                     </div>
                     <div class="applicant-list">
                         <div class="name-mail">
-                          <strong>Md. Maraj Hossain</strong>
+                          <h4>Md. Maraj Hossain</h4>
                           <p>marajmmc@gmail.com</p>
                         </div>
                         <span class="status-onboard">Onboard Applicant</span>
@@ -187,34 +188,34 @@
                         class="btn-Tertiary closebtn">
                         <i class="hgi-stroke hgi-arrow-left-02"></i>
                     </button>
-                    <strong class="text-md font-medium text-neutral-800">Add Applicant</strong>
+                    <h1 class="text-md font-medium text-neutral-800">Add Applicant</h1>
                 </div>
 
                 <!--add applicant content-->
-                <div class="p-3 flex flex-col gap-9">
+                <div class="space-y-6 px-6 py-6">
                     <form action="">
                         <div class="mb-3">
-                            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Applicant Name</label>
+                            <label for="name" class="block mb-2 text-neutral-800">Applicant Name</label>
                             <input type="text" name="name" id="name" class="text-input" placeholder="Enter name" required=""/>
                         </div>
 
                         <div class="mb-3">
-                            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Email Address</label>
+                            <label for="name" class="block mb-2 text-neutral-800">Email Address</label>
                             <input type="text" name="name" id="name" class="text-input" placeholder="Enter email address" required=""/>
                         </div>
                 
                         <div class="mb-3">
-                            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">Phone Number</label>
+                            <label for="name" class="block mb-2 text-neutral-800">Phone Number</label>
                             <input type="text" name="name" id="name" class="text-input" placeholder="Enter phone number" />
                         </div>
                 
                         <div class="mb-3">
-                            <label for="name" class="block mb-2 text-sm font-medium text-neutral-800">CRM ID</label>
+                            <label for="name" class="block mb-2 text-neutral-800">CRM ID</label>
                             <input type="text" name="name" id="name" class="text-input" placeholder="Enter CRM ID" required="" />
                         </div>
                 
                         <div class="col-span-2">
-                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Product Description</label>
+                            <label for="description" class="block mb-2 text-gray-900">Product Description</label>
                             <textarea id="address" rows="3" class="area-input bg-neutral-100" placeholder="Applicant address..."></textarea>
                         </div>
                     </form>
@@ -247,7 +248,7 @@
                 <!--applicant head-->
                 <div class="applicant-head grid gap-1">
                     <div class="flex gap-2 items-center">
-                        <strong>Md. Maraj Hossain</strong>
+                        <h3>Md. Maraj Hossain</h3>
                         <span class="badge-Register">Register</span>
                     </div>
                     <p>marajmmc@gmail.com</p>
@@ -267,34 +268,35 @@
                         <button 
                             type="button"
                             class="btn-secondary">
-                            <small class="text-sm font-medium">Follow-up Date</small>
+                            <b class="text-sm font-medium">Follow-up Date</b>
                         </button>
                         <button 
                             type="button"
                             class="btn-secondary">
-                            <small class="text-sm font-medium">Add Note</small>
+                            <b class="text-sm font-medium">Add Note</b>
                         </button>
                         <button 
                             type="button"
                             class="btn-secondary">
-                            <small class="text-sm font-medium">Pin to Top</small>
+                            <b class="text-sm font-medium">Pin to Top</b>
                         </button>
                         <button 
                             type="button"
                             class="btn-secondary">
-                            <small class="text-sm font-medium">Assign Team</small>
+                            <b class="text-sm font-medium">Assign Team</b>
                         </button>
                         <button 
                             type="button"
-                            class="btn-secondary">
-                            <small class="text-sm font-medium">Applicant Profile</small>
+                            class="btn-secondary"
+                            onclick="openapplicantprofilemodal()">
+                            <b class="text-sm font-medium">Applicant Profile</b>
                         </button>
                         <hr class="w-full text-neutral-300"/>
                         <button
                             type="button"
                             class="btn-secondary"
                             onclick="openonboardapplicantmodal()">
-                            <small class="text-sm font-medium">Onboard Now</small>
+                            <b class="text-sm font-medium">Onboard Now</b>
                         </button>
                     </div>
                 </div>
@@ -306,28 +308,28 @@
                     type="button"
                     class="tab-button active btn-tab"
                     onclick="openTab(event, 'activity-history')">
-                    Activity history
+                    <b>Activity history</b>
                 </button>
 
                 <button
                     type="button"
                     class="tab-button btn-tab"
                     onclick="openTab(event, 'onboard-applicant')">
-                    Onboard Applicant
+                    <b>Onboard Applicant</b>
                 </button>
 
                 <button
                     type="button"
                     class="tab-button btn-tab"
                     onclick="openTab(event, 'profile')">
-                    Profile
+                    <b>Profile</b>
                 </button>
 
                 <button
                     type="button"
                     class="tab-button btn-tab"
                     onclick="openTab(event, 'manage-university')">
-                    Manage University
+                    <b>Manage University</b>
                 </button>
             </div>
 
@@ -346,12 +348,12 @@
                         <img class="avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
                         <div class="flex gap-2">
                             <p>Syam Rhye</p>
-                            <span class="status-register">Registered Applicant</span>
+                            <b class="status-register">Registered Applicant</b>
                         </div>
                     </div>
             
                     <div class="chat-system">
-                        <strong>Ishaan Akhtar</strong>
+                        <b>Ishaan Akhtar</b>
                         <p>Ester123@gmail.com</p>
                     </div>
             
@@ -359,18 +361,18 @@
                         <img class="avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
                         <div class="flex gap-2">
                             <p>Syam Rhye</p>
-                            <span class="text-neutral-800">Created Follow Up Discussion</span>
+                            <b class="text-neutral-800">Created Follow Up Discussion</b>
                         </div>
                     </div>
             
                     <div class="chat-discusation">
-                        <strong> Todays Discusation</strong>
+                        <b> Todays Discusation</b>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.</p>
             
                         <div class="follow-up-b">
                             <div class="follow-up-bg">
-                                <strong>Next Follow-up Issue</strong>
+                                <b>Next Follow-up Issue</b>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                                 dolore magna aliqua. </p>
                             </div>
@@ -387,12 +389,12 @@
                         <img class="avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
                         <div class="flex gap-2">
                             <p>Zohir Ahmed</p>
-                            <span class="status-onboard">Onboarded Applicant</span>
+                            <b class="status-onboard">Onboarded Applicant</b>
                         </div>
                     </div>
             
                     <div class="chat-system">
-                        <strong>Note</strong>
+                        <b>Note</b>
                         <p>Congratulations! Please add university for the applicant.</p>
                     </div>
             
@@ -418,7 +420,7 @@
             
                     <div class="flex items-center">
                         <hr class="w-full text-neutral-200" />
-                        <div class="text-nowrap text-xs mx-2 text-neutral-400">No more Activity</div>
+                        <small class="text-nowrap mx-2 text-neutral-400">No more Activity</small>
                         <hr class="w-full text-neutral-200" />
                     </div>
                 </div>
@@ -473,13 +475,20 @@
                         class="btn-Tertiary">
                         <i class="hgi-stroke hgi-cancel-01"></i>
                     </button>
-                    <strong class="text-md font-medium text-neutral-800">Onboard Applicant</strong>
+                    <h1 class="text-md font-medium text-neutral-800">Onboard Applicant</h1>
             </div>
 
-            <form class="flex flex-col gap-9 px-6 py-9">
+            <form class="space-y-6 px-6 py-6">
+                <div class="created-by flex-col">
+                    <img class="details-avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
+                    <div class="justify-items-center">
+                        <h2>Md. Maraj Hossain</h2>
+                        <p>marajmmc@gmail.com</p>
+                    </div>
+                </div>
                 <div class="justify-items-left">
-                    <span>You are going to onboard this applicant</span>
-                    <p class="text-sm text-neutral-400">By onboarding this applicant will be a permeant user to this system. You are allowing to chat and share documents with assigned team.</p>
+                    <h4>You are going to onboard this applicant</h4>
+                    <p class="text-neutral-400">By onboarding this applicant will be a permeant user to this system. You are allowing to chat and share documents with assigned team.</p>
                 </div>
                 <div class="flex gap-2">
                     <button
@@ -497,6 +506,48 @@
                 </div>
             </form>
         </div>
+
+        <!--applicant profile modal-->
+        <div id="applicant-profile" class="w-2/5 hidden border-x border-neutral-200">
+            <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+                    <button
+                        type="button"
+                        onclick="closeapplicantprofilemodal()"
+                        class="btn-Tertiary">
+                        <i class="hgi-stroke hgi-cancel-01"></i>
+                    </button>
+                    <h1 class="text-md font-medium text-neutral-800">Applicant Details</h1>
+            </div>
+
+            <form class="space-y-6 px-6 py-6">
+                <div class="created-by flex-col">
+                    <img class="details-avatar" src="https://media.licdn.com/dms/image/v2/D5603AQGJfJ2tJyG0pQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671297074941?e=2147483647&v=beta&t=Hx4wDdz6LvUYRC5VL9xyj3eKtJFgiuoiXNf5QiHWu5g" alt="" />
+                    <div class="justify-items-center">
+                        <h2>Md. Maraj Hossain</h2>
+                        <p>marajmmc@gmail.com</p>
+                    </div>
+                </div>
+                <div class="divide-y divide-neutral-200">
+                    <div class="grid grid-flow-col justify-between items-center py-3">
+                        <h4>Personal Information</h4>
+                        <i class="hgi-stroke hgi-edit-02"></i>
+                    </div>
+                    <div class="grid grid-flow-col justify-between items-center py-3">
+                        <b>Phone Number</b>
+                        <p>+8801738552161</p>
+                    </div>
+                    <div class="grid grid-flow-col justify-between items-center py-3">
+                        <b>CRM ID</b>
+                        <p>5623 D 41</p>
+                    </div>
+                    <div class="grid grid-flow-row justify-between items-center py-3">
+                        <b>Address</b>
+                        <p>John Doe, 456 Elm Street, Suite 3, Los Angeles, CA 90001, USA.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
         <!--calendar modal-->
         <div id="calendarContainer" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-xl shadow-lg w-80 hidden">
             <div class="flex justify-between items-center">
