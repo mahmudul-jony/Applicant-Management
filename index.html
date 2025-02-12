@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/src/input.css">
 
 </head>
-<body class="font-serif flex">
+<body class="font-serif flex h-screen">
     <!--sidebar section-->
     <sidebar class="flex flex-col gap-3 p-3 w-fit">
         <!--brand logo-->
@@ -101,7 +101,7 @@
             </div>
 
         <!--applicant list-->
-            <div class="flex flex-col p-1.5">
+            <div class="flex flex-col p-1.5 overflow-y-auto h-[calc(100%-128.4px)]">
                 <div class="applicant-list">
                     <div class="name-mail">
                         <h4>Md. Maraj Hossain</h4>
@@ -319,8 +319,8 @@
         </div>
 
         <!--activity-history tab pages-->
-        <div class="tab-container" id="activity-history">
-            <div class="p-4 ">
+        <div class="tab-container h-screen" id="activity-history">
+            <div class="p-4 overflow-y-auto h-[calc(100%-292px)]">
                 <div class="date">
                     <hr class="w-full text-neutral-200" />
                     <p>18 Feb 2025</p>
