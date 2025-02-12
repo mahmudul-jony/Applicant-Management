@@ -68,7 +68,7 @@
     </sidebar>
 
 <!--middle section-->
-    <section class="min-w-80 border-x flex border-neutral-200 h-screen">
+    <section class="min-w-80 border-x flex border-neutral-200">
         
         <!--applicant list section-->
         <div id="applicant-list-section" class="w-full">
@@ -101,7 +101,7 @@
             </div>
 
         <!--applicant list-->
-            <div class="flex flex-col p-1.5 overflow-y-auto">
+            <div class="flex flex-col p-1.5">
                 <div class="applicant-list">
                     <div class="name-mail">
                         <h4>Md. Maraj Hossain</h4>
@@ -305,22 +305,22 @@
         <div class="flex flex-wrap px-2 border-y border-neutral-200">
             <button
                 type="button"
-                class="tab-button active btn-tab"
-                onclick="openTab(event, 'activity-history')">
+                class="tab-button btn-tab"
+                onclick="openTab(event, 'manage-university')">
                 <b>Activity history</b>
             </button>
 
             <button
                 type="button"
                 class="tab-button btn-tab"
-                onclick="openTab(event, 'manage-university')">
+                onclick="openTab(event, 'activity-history')">
                 <b>Manage University</b>
             </button>
         </div>
 
         <!--activity-history tab pages-->
-        <div class="tab-container active bg-teal-800" id="activity-history">
-            <div class="p-4 bg-teal-50 ">
+        <div class="tab-container" id="activity-history">
+            <div class="p-4 ">
                 <div class="date">
                     <hr class="w-full text-neutral-200" />
                     <p>18 Feb 2025</p>
@@ -436,8 +436,37 @@
         </div>
 
         <!--manage university tab pages-->
-        <div class="tab-container hidden p-4 bg-neutral-100" id="manage-university">
+        <div class="tab-container hidden p-4" id="manage-university">
             <p class="text-2xl text-neutral-800">Manage University</p>
+            <table class="table-fix w-full">
+                <thead>
+                  <tr>
+                    <th>University Name</th>
+                    <th>Course Name</th>
+                    <th>Offer Letter Date</th>
+                    <th>Confirmation Letter Date</th>
+                    <th>Application Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                    <td>Malcolm Lockyer</td>
+                    <td>1961</td>
+                  </tr>
+                  <tr>
+                    <td>Witchy Woman</td>
+                    <td>The Eagles</td>
+                    <td>1972</td>
+                  </tr>
+                  <tr>
+                    <td>Shining Star</td>
+                    <td>Earth, Wind, and Fire</td>
+                    <td>1975</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
         
         
