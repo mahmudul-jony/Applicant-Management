@@ -89,3 +89,7 @@ th {@apply text-sm font-medium py-3 text-left}
 td {@apply text-sm font-normal py-3 text-nowrap text-left}
 thead tr {@apply border-b border-neutral-300 gap-6}
 tr {@apply border-b border-neutral-200}
+
+/* * {
+  outline: 1px solid red;
+} */
