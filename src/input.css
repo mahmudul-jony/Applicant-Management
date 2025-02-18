@@ -20,13 +20,13 @@ H1 {@apply text-2xl font-semibold}
 .btn-Tertiary {@apply flex items-center justify-start gap-2 p-2.5 text-neutral-400 rounded-full hover:bg-neutral-100 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 transition-colors duration-300 ease-in-out}
 .btn-Tertiary-only {@apply flex items-center justify-start gap-2 p-2.5 w-fit h-fit text-neutral-400 rounded-full hover:bg-neutral-100 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 transition-colors duration-300 ease-in-out}
 .btn-link {@apply flex items-center justify-start gap-2 text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
-.btn-date-picker {@apply block w-full ps-7 text-sm placeholder-neutral-400 hover:placeholder-neutral-800 focus:outline-none transition-colors duration-300 ease-in-out}
+.btn-date-picker {@apply block w-full ps-7 text-sm placeholder-neutral-400 hover:placeholder-neutral-800  transition-colors duration-300 ease-in-out}
 .btn-tab {@apply p-2.5 text-center text-neutral-400 hover:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 
-.chat-input {@apply resize-none w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border-b border-neutral-100 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
-.area-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
-.text-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
-.search-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 rounded-l-lg focus:placeholder-neutral-400 focus:outline-none transition-colors duration-300 ease-in-out}
+.chat-input {@apply resize-none w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border-b border-neutral-100 rounded-lg focus:placeholder-neutral-400  transition-colors duration-300 ease-in-out}
+.area-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg focus:placeholder-neutral-400  transition-colors duration-300 ease-in-out}
+.text-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg focus:placeholder-neutral-400  transition-colors duration-300 ease-in-out}
+.search-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 rounded-l-lg focus:placeholder-neutral-400  transition-colors duration-300 ease-in-out}
 .btn-search {@apply flex items-center justify-center p-2.5 text-neutral-400 bg-neutral-100 rounded-r-lg hover:bg-neutral-200 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 
 .hgi-stroke {@apply w-5 h-5 flex items-center justify-center text-xl leading-5}
@@ -85,11 +85,11 @@ H1 {@apply text-2xl font-semibold}
 }
 
 
-th {@apply text-sm font-medium py-3 text-left}
-td {@apply text-sm font-normal py-3 text-nowrap text-left}
+th {@apply text-sm font-medium py-2 text-left}
+td {@apply text-sm font-normal py-2 text-nowrap text-left}
 thead tr {@apply border-b border-neutral-300 gap-6}
 tr {@apply border-b border-neutral-200}
 
 /* * {
-  outline: 1px solid red;
+  outline: 1px solid rgb(164, 136, 136);
 } */

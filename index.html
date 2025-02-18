@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/src/input.css">
 
 </head>
-<body class="font-serif flex h-screen">
+<body class="font-serif flex h-screen" contenteditable="false">
     <!--sidebar section-->
     <sidebar class="flex flex-col gap-3 p-3 w-fit">
         <!--brand logo-->
@@ -258,49 +258,12 @@
                 type="button"
                 id="btn-more"
                 data-popover="more-menu"
-                data-offset-x="-520" data-offset-y="8"
+                data-offset-x="-136" data-offset-y="8"
                 class="btn-more btn-Tertiary-only">
                 <i class="hgi-stroke hgi-more-vertical"></i>
             </button>
 
-            <!--popover menu-->
-            <div id="more-menu" class="popover-menu absolute hidden p-1.5 z-10 w-44 border-t border-neutral-300 bg-white shadow-lg rounded-lg">
-                <div class="flex flex-col gap-1.5 text-nowrap">
-                    <button 
-                        type="button"
-                        class="btn-secondary">
-                        <b class="text-sm font-medium">Follow-up Date</b>
-                    </button>
-                    <button 
-                        type="button"
-                        class="btn-secondary">
-                        <b class="text-sm font-medium">Add Note</b>
-                    </button>
-                    <button 
-                        type="button"
-                        class="btn-secondary">
-                        <b class="text-sm font-medium">Pin to Top</b>
-                    </button>
-                    <button 
-                        type="button"
-                        class="btn-secondary">
-                        <b class="text-sm font-medium">Assign Team</b>
-                    </button>
-                    <button 
-                        type="button"
-                        class="btn-secondary"
-                        onclick="openapplicantprofilemodal()">
-                        <b class="text-sm font-medium">Applicant Profile</b>
-                    </button>
-                    <hr class="w-full text-neutral-300"/>
-                    <button
-                        type="button"
-                        class="btn-secondary"
-                        onclick="openonboardapplicantmodal()">
-                        <b class="text-sm font-medium">Onboard Now</b>
-                    </button>
-                </div>
-            </div>
+            
         </div>
         
         <!--Tab buttons-->
@@ -438,106 +401,98 @@
         </div>
 
         <!--manage university tab pages-->
-        <div class="tab-container hidden p-4" id="manage-university">
-            <p class="text-2xl text-neutral-800">Manage University</p>
-            <table class="w-full">
-                <thead>
-                  <tr>
-                    <th>University Name</th>
-                    <th>Course Name</th>
-                    <th>Offer Letter Date</th>
-                    <th>Confirmation Letter Date</th>
-                    <th>Application Status</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                    <td>Malcolm Lockyer</td>
-                    <td>1961</td>
-                    <td>1961</td>
-                    <td>1961</td>
-                    <td class="">
-
-                        <!--more button-->
-                        <button
-                            type="button"
-                            id="table-btn-more"
-                            data-popover="table-more-menu"
-                            data-offset-x="-136" data-offset-y="8"
-                            class="btn-more btn-Tertiary-only">
-                            <i class="hgi-stroke hgi-more-vertical"></i>
-                        </button>
+        <div class="tab-container hidden" id="manage-university">
+            <div class="flex items-center justify-between p-3 border-b border-neutral-200">
+                <H4>Manage University</H4>
+                <button
+                    type="button"
+                    onclick="openadduniversitymodal()"
+                    class="btn-primary">
+                    <i class="hgi-stroke hgi-stroke hgi-add-01"></i>
+                    <b>Add University</b>
+                </button>
+            </div>
             
-                        <!--popover menu-->
-                        <div id="table-more-menu" class="popover-menu absolute hidden p-1.5 z-10 w-44 border-t border-neutral-300 bg-white shadow-lg rounded-lg">
-                            <div class="flex flex-col gap-1.5 text-nowrap">
-                                <button 
-                                    type="button"
-                                    class="btn-secondary">
-                                    <i class="hgi-stroke hgi-edit-02"></i>
-                                    <b>Edit</b>
-                                </button>
-                                <div class="py-2 px-3 border-y border-neutral-200">
-                                    <span class="font-medium">Set Status</span>
-                                </div>
-                                <button 
-                                    type="button"
-                                    class="btn-secondary">
-                                    <i class="hgi-stroke hgi-clock-05"></i>
-                                    <b>In Progress</b>
-                                </button>
-                                <button 
-                                    type="button"
-                                    class="btn-secondary">
-                                    <i class="hgi-stroke hgi-collections-bookmark"></i>
-                                    <b>Drafted</b>
-                                </button>
-                                <button 
-                                    type="button"
-                                    class="btn-secondary"
-                                    onclick="openapplicantprofilemodal()">
-                                    <i class="hgi-stroke hgi-tick-02"></i>
-                                    <b>Completed</b>
-                                </button>
-                                <button
-                                    type="button"
-                                    class="btn-secondary"
-                                    onclick="openonboardapplicantmodal()">
-                                    <i class="hgi-stroke hgi-help-circle"></i>
-                                    <b>Rejected</b>
-                                </button>
-                                <button 
-                                    type="button"
-                                    class="btn-secondary">
-                                    <i class="hgi-stroke hgi-cancel-01"></i>
-                                    <b>Canceled</b>
-                                </button>
-                            </div>
-                        </div>
+            <div class="px-3">
+                <table class="w-full">
+                    <thead>
+                      <tr>
+                        <th>University Name</th>
+                        <th>Course Name</th>
+                        <th>Offer Letter Date</th>
+                        <th>Confirmation Letter Date</th>
+                        <th>Application Status</th>
+                        <th class="text-right">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Melborn University</td>
+                        <td>MBA</td>
+                        <td>Feb 18, 2025</td>
+                        <td>Feb 18, 2025</td>
+                        <td>University Added</td>
+                        <td class="place-items-end">
 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Witchy Woman</td>
-                    <td>The Eagles</td>
-                    <td>1972</td>
-                  </tr>
-                  <tr>
-                    <td>Shining Star</td>
-                    <td>Earth, Wind, and Fire</td>
-                    <td>1975</td>
-                  </tr>
-                </tbody>
-              </table>
+                            <!--more button-->
+                            <button
+                                type="button"
+                                id="table-btn-more"
+                                data-popover="table-more-menu"
+                                data-offset-x="-136" data-offset-y="8"
+                                class="btn-more btn-Tertiary-only">
+                                <i class="hgi-stroke hgi-more-vertical"></i>
+                            </button>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>University of Australia</td>
+                        <td>CSE</td>
+                        <td>Feb 18, 2025</td>
+                        <td>Feb 18, 2025</td>
+                        <td>In Progress</td>
+                        <td class="place-items-end">
+    
+                            <!--more button-->
+                            <button
+                                type="button"
+                                id="table-btn-more"
+                                data-popover="table-more-menu"
+                                data-offset-x="-136" data-offset-y="8"
+                                class="btn-more btn-Tertiary-only">
+                                <i class="hgi-stroke hgi-more-vertical"></i>
+                            </button>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Sydny University</td>
+                        <td>MBA</td>
+                        <td>Feb 18, 2025</td>
+                        <td>Feb 18, 2025</td>
+                        <td>Rejected</td>
+                        <td class="place-items-end">
+
+                            <!--more button-->
+                            <button
+                                type="button"
+                                id="table-btn-more"
+                                data-popover="table-more-menu"
+                                data-offset-x="-136" data-offset-y="8"
+                                class="btn-more btn-Tertiary-only">
+                                <i class="hgi-stroke hgi-more-vertical"></i>
+                            </button>
+
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        
-        
-
     </main>
 
-<!--modals section-->
+    <!--modals section-->
     <!--applicant onboard modal-->
     <div id="applicant-onboard" class="w-2/5 hidden border-x border-neutral-200">
         <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
@@ -620,6 +575,60 @@
         </form>
     </div>
 
+    <!--add university modal-->
+    <div id="add-university" class="w-80 bg-white inset-y-0 right-0 absolute hidden border-x border-neutral-200">
+        <div class="flex gap-3 p-3 border-b border-neutral-200 items-center">
+                <button
+                    type="button"
+                    onclick="closeadduniversityemodal()"
+                    class="btn-Tertiary">
+                    <i class="hgi-stroke hgi-cancel-01"></i>
+                </button>
+                <h1 class="text-md font-medium text-neutral-800">Add University</h1>
+        </div>
+
+        <!--modal body-->
+        <div class="space-y-6 px-6 py-6">
+            <form action="">
+                <div class="mb-3">
+                    <label for="name" class="block mb-2 text-neutral-800">University Name</label>
+                    <input type="text" name="name" id="name" class="text-input" placeholder="Enter yniversity name" required=""/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="block mb-2 text-neutral-800">Course Name</label>
+                    <input type="text" name="name" id="name" class="text-input" placeholder="Enter course name" required=""/>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="name" class="block mb-2 text-neutral-800">Offer Letter Date</label>
+                    <input type="date" name="name" id="name" class="text-input" placeholder="Enter phone number" />
+                </div>
+        
+                <div class="mb-3">
+                    <label for="name" class="block mb-2 text-neutral-800">Confirmation Letter Date</label>
+                    <input type="date" name="name" id="name" class="text-input" placeholder="Enter CRM ID" required="" />
+                </div>
+            </form>
+
+            <!--modal footer action-->
+            <div class="flex gap-2 justify-end">
+                <button
+                    type="button"
+                    onclick="closeadduniversityemodal()"
+                    class="btn-distractive closebtn">
+                    Cancel
+                </button>
+                <button
+                    type="button"
+                    class="btn-primary">
+                    Save
+                </button>
+            </div>
+
+        </div>
+    </div>
+
     <!--calendar modal-->
     <div id="calendarContainer" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 rounded-xl shadow-lg w-80 hidden">
         <div class="flex justify-between items-center">
@@ -647,8 +656,98 @@
             </div>
         </div>
     </div>
-    
-    
+
+    <!--table-more popover menu-->
+    <div id="table-more-menu" class="popover-menu absolute hidden p-1.5 z-10 w-44 border-t border-neutral-300 bg-white shadow-lg rounded-lg">
+        <div class="flex flex-col gap-1.5 text-nowrap">
+            <button 
+                type="button"
+                class="btn-secondary">
+                <i class="hgi-stroke hgi-edit-02"></i>
+                <b>Edit</b>
+            </button>
+            <div class="py-2 px-3 border-y border-neutral-200">
+                <span class="font-medium">Set Status</span>
+            </div>
+            <button 
+                type="button"
+                class="btn-secondary">
+                <i class="hgi-stroke hgi-check-list"></i>
+                <b>University Added</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary">
+                <i class="hgi-stroke hgi-clock-05"></i>
+                <b>In Progress</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary">
+                <i class="hgi-stroke hgi-collections-bookmark"></i>
+                <b>Drafted</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary"
+                onclick="openapplicantprofilemodal()">
+                <i class="hgi-stroke hgi-tick-02"></i>
+                <b>Completed</b>
+            </button>
+            <button
+                type="button"
+                class="btn-secondary"
+                onclick="openonboardapplicantmodal()">
+                <i class="hgi-stroke hgi-help-circle"></i>
+                <b>Rejected</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary">
+                <i class="hgi-stroke hgi-cancel-01"></i>
+                <b>Canceled</b>
+            </button>
+        </div>
+    </div>
+
+    <!--popover menu-->
+    <div id="more-menu" class="popover-menu absolute hidden p-1.5 z-10 w-44 border-t border-neutral-300 bg-white shadow-lg rounded-lg">
+        <div class="flex flex-col gap-1.5 text-nowrap">
+            <button 
+                type="button"
+                class="btn-secondary">
+                <b class="text-sm font-medium">Follow-up Date</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary">
+                <b class="text-sm font-medium">Add Note</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary">
+                <b class="text-sm font-medium">Pin to Top</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary">
+                <b class="text-sm font-medium">Assign Team</b>
+            </button>
+            <button 
+                type="button"
+                class="btn-secondary"
+                onclick="openapplicantprofilemodal()">
+                <b class="text-sm font-medium">Applicant Profile</b>
+            </button>
+            <hr class="w-full text-neutral-300"/>
+            <button
+                type="button"
+                class="btn-secondary"
+                onclick="openonboardapplicantmodal()">
+                <b class="text-sm font-medium">Onboard Now</b>
+            </button>
+        </div>
+    </div>
 
     <!--scripts-->
     <script src="/js/more-menu.js"></script>

@@ -1,60 +1,53 @@
-// script for onboard applicant modal
-function openonboardapplicantmodal() {
-    document.getElementById("applicant-onboard").style.display = "block";
-    }
-    
-    function closeonboardapplicantmodal() {
-    document.getElementById("applicant-onboard").style.display = "none";
-    }
-
-// script for applicant profile modal
-function openapplicantprofilemodal() {
-    document.getElementById("applicant-profile").style.display = "block";
-    }
-    
-    function closeapplicantprofilemodal() {
-    document.getElementById("applicant-profile").style.display = "none";
-    }
-
-// // script for menu
+// // script for more-menu
 document.querySelectorAll(".btn-more").forEach((button) => {
     button.addEventListener("click", (event) => {
         event.stopPropagation();
-        
-        // Get corresponding popover menu using data attribute
+
         const popoverId = button.getAttribute("data-popover");
         const popover = document.getElementById(popoverId);
-
         if (!popover) return;
 
-        // Close all other popovers before opening the clicked one
+        // Close other popovers before opening the clicked one
         document.querySelectorAll(".popover-menu").forEach((menu) => {
             if (menu !== popover) {
-                menu.style.display = "none";
+                menu.classList.add("hidden");
             }
         });
 
-        // Toggle popover
-        if (popover.style.display === "none" || popover.style.display === "") {
-            const rect = button.getBoundingClientRect();
+        const rect = button.getBoundingClientRect();
+        const popoverHeight = popover.offsetHeight;
 
-            // Get custom position from data attributes (if provided)
-            const offsetX = button.getAttribute("data-offset-x") || 0;
-            const offsetY = button.getAttribute("data-offset-y") || 8;
+        // Get viewport height dynamically (ignores h-screen limitations)
+        const viewportHeight = window.innerHeight;
 
-            popover.style.top = `${rect.bottom + window.scrollY + parseInt(offsetY)}px`;
-            popover.style.left = `${rect.left + window.scrollX + parseInt(offsetX)}px`;
-            popover.style.display = "block";
+        // Calculate available space
+        const spaceBelow = viewportHeight - rect.bottom;
+        const spaceAbove = rect.top;
+
+        // Get custom offsets (if provided)
+        const offsetX = parseInt(button.getAttribute("data-offset-x") || 0);
+        const offsetY = parseInt(button.getAttribute("data-offset-y") || 8);
+
+        // Determine best position
+        if (spaceBelow >= popoverHeight || spaceBelow > spaceAbove) {
+            // Place below button
+            popover.style.top = `${rect.bottom + window.scrollY + offsetY}px`;
+            popover.classList.remove("bottom-full"); // Reset if previously above
         } else {
-            popover.style.display = "none";
+            // Place above button
+            popover.style.top = `${rect.top + window.scrollY - popoverHeight - offsetY}px`;
+            popover.classList.add("bottom-full");
         }
+
+        popover.style.left = `${rect.left + window.scrollX + offsetX}px`;
+        popover.classList.remove("hidden");
     });
 });
 
 // Hide popover when clicking a menu option
 document.querySelectorAll(".popover-menu").forEach((popover) => {
     popover.addEventListener("click", () => {
-        popover.style.display = "none";
+        popover.classList.add("hidden");
     });
 });
 
@@ -62,7 +55,8 @@ document.querySelectorAll(".popover-menu").forEach((popover) => {
 document.addEventListener("click", (event) => {
     document.querySelectorAll(".popover-menu").forEach((popover) => {
         if (!popover.contains(event.target) && !event.target.classList.contains("btn-more")) {
-            popover.style.display = "none";
+            popover.classList.add("hidden");
         }
     });
 });
+
