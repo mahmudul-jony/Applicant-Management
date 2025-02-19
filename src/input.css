@@ -95,7 +95,7 @@ tr {@apply border-b border-neutral-200}
 } */
 
 
-.calendar-day { @apply h-12 rounded-full transition-all  }
+.calendar-day { @apply h-10 rounded-full transition-all  }
 .calendar-day:hover { @apply  bg-teal-800 text-white }
 .calendar-day:active { @apply bg-teal-900 text-white }
 .selected-date { @apply bg-teal-800 text-white }
