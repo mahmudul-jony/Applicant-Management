@@ -25,26 +25,42 @@
             <button
                 type="button"
                 onclick="document.location='all-buttons.html'"
-                class="btn-Tertiary">
+                class="btn-Tertiary relative group">
                 <i class="hgi-stroke hgi-stroke hgi-dashboard-browsing"></i>
+                <div class="hidden absolute left-14 group-hover:block bg-white text-neutral-800 border border-neutral-200 p-2 rounded-xl shadow-lg">
+                    <b>Dashboard</b>
+                    <div class="absolute left-[-8px] top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                </div>
             </button>
 
             <button
                 type="button"
-                class="btn-Tertiary">
+                class="btn-Tertiary relative group">
                 <i class="hgi-stroke hgi-stroke hgi-user-multiple-02"></i>
+                <div class="hidden absolute left-14 group-hover:block bg-white text-neutral-800 border border-neutral-200 p-2 rounded-xl shadow-lg">
+                    <b>Applicants</b>
+                    <div class="absolute left-[-8px] top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                </div>
             </button>
 
             <button
                 type="button"
-                class="btn-Tertiary">
+                class="btn-Tertiary relative group">
                 <i class="hgi-stroke hgi-stroke hgi-task-daily-02"></i>
+                <div class="hidden absolute left-14 group-hover:block bg-white text-neutral-800 border border-neutral-200 p-2 rounded-xl shadow-lg">
+                    <b>Tasks</b>
+                    <div class="absolute left-[-8px] top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                </div>
             </button>
 
             <button
                 type="button"
-                class="btn-Tertiary">
+                class="btn-Tertiary relative group">
                 <i class="hgi-stroke hgi-stroke hgi-notification-02"></i>
+                <div class="hidden absolute left-14 group-hover:block bg-white text-neutral-800 border border-neutral-200 p-2 rounded-xl shadow-lg">
+                    <b>Notifications</b>
+                    <div class="absolute left-[-8px] top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                </div>
             </button>
 
         </div>
@@ -55,14 +71,22 @@
             <button
                 type="button"
                 onclick="document.location='typo.html'"
-                class="btn-Tertiary">
+                class="btn-Tertiary relative group">
                 <i class="hgi-stroke hgi-stroke hgi-settings-02"></i>
+                <div class="hidden absolute left-14 group-hover:block bg-white text-neutral-800 border border-neutral-200 p-2 rounded-xl shadow-lg">
+                    <b>Settings</b>
+                    <div class="absolute left-[-8px] top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                </div>
             </button>
 
             <button
                 type="button"
-                class="btn-Tertiary">
+                class="btn-Tertiary relative group">
                 <i class="hgi-stroke hgi-stroke hgi-user-circle-02"></i>
+                <div class="hidden absolute left-14 group-hover:block bg-white text-neutral-800 border border-neutral-200 p-2 rounded-xl shadow-lg">
+                    <b>Profile</b>
+                    <div class="absolute left-[-8px] top-1/2 -translate-y-1/2 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                </div>
             </button>
         </div>
     </sidebar>
@@ -270,21 +294,21 @@
         <div class="flex flex-wrap gap-6 px-3 border-b border-neutral-200">
             <button
                 type="button"
-                class="tab-button btn-tab"
-                onclick="openTab(event, 'manage-university')">
+                class="tab-button btn-tab active"
+                onclick="openTab(event, 'activity-history')">
                 <b>Activity history</b>
             </button>
 
             <button
                 type="button"
                 class="tab-button btn-tab"
-                onclick="openTab(event, 'activity-history')">
+                onclick="openTab(event, 'manage-university')">
                 <b>Manage University</b>
             </button>
         </div>
 
         <!--activity-history tab pages-->
-        <div class="tab-container flex flex-col h-[calc(100%-121.6px)]" id="activity-history">
+        <div class="tab-container flex-col h-[calc(100%-121.6px)] hidden" id="activity-history">
             <div class="flex-1 bg-neutral-50 overflow-y-auto p-4">
                 <div class="date">
                     <hr class="w-full text-neutral-200" />
@@ -404,7 +428,7 @@
         </div>
 
         <!--manage university tab pages-->
-        <div class="tab-container hidden" id="manage-university">
+        <div class="tab-container flex flex-col h-[calc(100%-121.6px)]" id="manage-university">
             <div class="flex items-center justify-between p-3 border-b border-neutral-200">
                 <H4>Manage University</H4>
                 <button
