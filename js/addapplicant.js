@@ -1,34 +1,55 @@
-// script for middle section
+console.log("addapplicant.js loaded");
+
 function openaddapplicantmodal() {
+    console.log("Opening Add Applicant modal");
     document.getElementById("add-Applicant-modal").style.display = "block";
     document.getElementById("applicant-list-section").style.display = "none";
-    }
+}
+
 function closeaddapplicantmodal() {
+    console.log("Closing Add Applicant modal");
     document.getElementById("add-Applicant-modal").style.display = "none";
     document.getElementById("applicant-list-section").style.display = "block";
-    }
+}
 
-// script for onboard applicant modal
 function openonboardapplicantmodal() {
+    console.log("Opening Onboard Applicant modal");
     document.getElementById("applicant-onboard").style.display = "block";
-    }
-    function closeonboardapplicantmodal() {
+}
+
+function closeonboardapplicantmodal() {
+    console.log("Closing Onboard Applicant modal");
     document.getElementById("applicant-onboard").style.display = "none";
-    }
+}
 
-// script for applicant profile modal
 function openapplicantprofilemodal() {
+    console.log("Opening Applicant Profile modal");
     document.getElementById("applicant-profile").style.display = "block";
-    }
-    function closeapplicantprofilemodal() {
-    document.getElementById("applicant-profile").style.display = "none";
-    }
+}
 
-// script for add university modal
+function closeapplicantprofilemodal() {
+    console.log("Closing Applicant Profile modal");
+    document.getElementById("applicant-profile").style.display = "none";
+}
+
 function openadduniversitymodal() {
-    document.getElementById("add-university").style.display = "block";
+    console.log("Opening Add University modal");
+    const modal = document.getElementById("add-university");
+    if (modal) {
+        modal.style.display = "block";
+        console.log("Modal display set to block");
+    } else {
+        console.error("Modal element with ID 'add-university' not found");
+    }
 }
 
 function closeadduniversitymodal() {
-    document.getElementById("add-university").style.display = "none";
+    console.log("Closing Add University modal");
+    const modal = document.getElementById("add-university");
+    if (modal) {
+        modal.style.display = "none";
+        console.log("Modal display set to none");
+    } else {
+        console.error("Modal element with ID 'add-university' not found");
+    }
 }
