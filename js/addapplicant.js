@@ -27,7 +27,8 @@ function openapplicantprofilemodal() {
 // script for add university modal
 function openadduniversitymodal() {
     document.getElementById("add-university").style.display = "block";
-    }
-    function closeadduniversitymodal() {
+}
+
+function closeadduniversitymodal() {
     document.getElementById("add-university").style.display = "none";
-    }
+}
