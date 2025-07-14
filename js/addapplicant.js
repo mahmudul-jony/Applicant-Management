@@ -28,6 +28,6 @@ function openapplicantprofilemodal() {
 function openadduniversitymodal() {
     document.getElementById("add-university").style.display = "block";
     }
-    function closeadduniversityemodal() {
+    function closeadduniversitymodal() {
     document.getElementById("add-university").style.display = "none";
     }
