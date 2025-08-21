@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Activity history minimal styles */
+@layer components {
+  .date {@apply flex items-center}
+  .date p {@apply text-neutral-400 text-nowrap mx-2}
+
+  .created-by {@apply flex items-center gap-3 my-1.5}
+  .avatar {@apply size-8 rounded-full ring-1 ring-neutral-200 bg-neutral-100}
+
+  .chat-system {@apply ml-11 my-3 rounded-xl bg-teal-500 border-b border-neutral-300 p-3 w-fit}
+  .chat-system b, .chat-system p {@apply text-neutral-800}
+
+  .chat-discusation {@apply ml-11 my-3 rounded-xl bg-white border-b border-neutral-300 p-3 w-fit}
+  .follow-up-b {@apply rounded-xl rounded-t-none border border-t-0 border-r-0 border-teal-800 pt-3}
+  .follow-up-bg {@apply rounded-xl bg-teal-500 p-3}
+
+  .status-register {@apply text-green-600}
+  .status-uadded {@apply text-yellow-500}
+  .status-onboard {@apply text-red-600}
+
+  .chat-input {@apply resize-none w-full p-2.5 text-sm text-neutral-800 border-b border-neutral-100 rounded-lg focus:placeholder-neutral-400 transition-colors duration-300 ease-in-out}
+
+  /* Popover menu positioning */
+  .popover-menu {@apply absolute z-50}
+  
+  /* Prevent scrollbars and ensure proper sizing */
+  .popover-menu {
+    @apply overflow-hidden;
+    max-height: none !important;
+    max-width: none !important;
+  }
+  
+  .popover-menu * {
+    @apply overflow-visible;
+  }
+  
+  /* Ensure popover content fits properly */
+  .popover-menu > div {
+    @apply overflow-visible;
+  }
+  
+  /* Ensure popover content fits properly */
+  .popover-menu > div {
+    @apply overflow-visible;
+  }
+  
+  /* Prevent body scrollbars when popovers are open */
+  body.popover-open {
+    @apply overflow-hidden;
+  }
+  
+  /* Ensure popover menus are properly contained */
+  .popover-menu {
+    @apply max-h-none max-w-none;
+    contain: layout style paint;
+  }
+}

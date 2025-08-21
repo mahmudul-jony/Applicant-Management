@@ -29,6 +29,17 @@ H1 {@apply text-2xl font-semibold}
 .search-input {@apply w-full p-2.5 text-sm text-neutral-800 bg-neutral-50 rounded-l-lg focus:placeholder-neutral-400  transition-colors duration-300 ease-in-out}
 .btn-search {@apply flex items-center justify-center p-2.5 text-neutral-400 bg-neutral-100 rounded-r-lg hover:bg-neutral-200 hover:text-neutral-600 active:bg-neutral-200 active:text-neutral-800 h-fit transition-colors duration-300 ease-in-out}
 
+/* Form validation styles */
+.text-input.error {@apply border-red-500 bg-red-50}
+.area-input.error {@apply border-red-500 bg-red-50}
+.chat-input.error {@apply border-red-500 bg-red-50}
+
+.text-input:focus {@apply border-teal-800 bg-white outline-none ring-2 ring-teal-200}
+.area-input:focus {@apply border-teal-800 bg-white outline-none ring-2 ring-teal-200}
+.chat-input:focus {@apply border-teal-800 bg-white outline-none ring-2 ring-teal-200}
+
+.field-error {@apply text-red-500 text-sm mt-1 font-medium}
+
 .hgi-stroke {@apply w-5 h-5 flex items-center justify-center text-xl leading-5}
 
 .badge-Register {@apply px-1.5 py-1 text-green-600 bg-neutral-50 rounded-md border border-neutral-200 h-fit}
@@ -100,3 +111,34 @@ tr {@apply border-b border-neutral-200}
 .calendar-day:active { @apply bg-teal-900 text-white }
 .selected-date { @apply bg-teal-800 text-white }
 .today-date { @apply text-teal-800 font-semibold border border-teal-800 }
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .applicant-list {@apply flex-col gap-2 items-start}
+    .applicant-list span {@apply text-left}
+    .name-mail-w {@apply w-full}
+    
+    .chat-system {@apply ml-0}
+    .chat-discusation {@apply ml-0}
+    
+    .btn-primary {@apply text-xs px-2 py-2}
+    .btn-secondary {@apply text-xs px-2 py-2}
+}
+
+/* Accessibility improvements */
+.btn-primary:focus {@apply outline-none ring-2 ring-teal-300 ring-offset-2}
+.btn-secondary:focus {@apply outline-none ring-2 ring-neutral-300 ring-offset-2}
+.btn-Tertiary:focus {@apply outline-none ring-2 ring-neutral-300 ring-offset-2}
+
+/* Loading states */
+.btn-primary:disabled {@apply opacity-50 cursor-not-allowed}
+.btn-secondary:disabled {@apply opacity-50 cursor-not-allowed}
+
+/* Animation improvements */
+.applicant-list {@apply transform transition-transform duration-200}
+.applicant-list:hover {@apply scale-[1.02]}
+
+/* Focus visible for better accessibility */
+.btn-primary:focus-visible {@apply ring-2 ring-teal-300 ring-offset-2}
+.btn-secondary:focus-visible {@apply ring-2 ring-neutral-300 ring-offset-2}
+.text-input:focus-visible {@apply ring-2 ring-teal-300 ring-offset-2}
